@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import "libs/mixins.scss";
+
+body {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+}
+header {
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+    box-shadow: 0 0 8px rgb(0 0 0 /25%);
+    padding: 2px;
+    position: relative;
+}
+main .city {
+    background-color: #eaeaea;
+    @include display;
+    padding: 4px;
+    gap: 16px;
+}
+main .city i {
+    font-size: 22px;
+}
+.reservation {
+   text-align: center;
+   background-color: #f6f6f6;
+   padding-bottom: 32px;
+}
+.reservation h2 {
+    margin: 0px;
+    padding-top: 32px;
+    font-size: 30px;
+}
+.reservation p {
+    font-size: 16px;
+}
+.reservation button {
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    border-radius: 32px 32px 32px 32px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    height: 48px;
+    width: 25%;
+}
+.reservation button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}   
+
+.howtodo h2 {
+    @include h2;
+}   
+.cartes {
+    display: flex;
+    gap: 100px;
+    padding-left: 200px;
+}
+.choice {
+    @include fonctionnement;
+    @include display
+   }
+   .cartes :hover {
+    background-color: thistle;
+}   
+    .number {
+    @include number;
+    transform: translate(180px);}
+
+.compose {
+    @include fonctionnement;
+    @include display;
+   }
+   .number2 {
+    @include number;
+    transform: translate(555px);
+}
+.eat {
+    @include fonctionnement;
+    @include display;
+   }
+    .number3 {
+        @include number;
+        transform: translate(920px);}
+
+.restaurants h2 {
+    @include h2;
+    }
+
+

@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  padding: 2px;
+  position: relative;
+}
+
+main .city {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  gap: 16px;
+}
+
+main .city i {
+  font-size: 22px;
+}
+
+.reservation {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding-bottom: 32px;
+}
+
+.reservation h2 {
+  margin: 0px;
+  padding-top: 32px;
+  font-size: 30px;
+}
+
+.reservation p {
+  font-size: 16px;
+}
+
+.reservation button {
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  border-radius: 32px 32px 32px 32px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  height: 48px;
+  width: 25%;
+}
+
+.reservation button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.howtodo h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 32px;
+}
+
+.cartes {
+  display: flex;
+  gap: 100px;
+  padding-left: 200px;
+}
+
+.choice {
+  background-color: #f6f6f6;
+  border-radius: 16px 16px 16px 16px;
+  width: 23%;
+  height: 70px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartes :hover {
+  background-color: thistle;
+}
+
+.number {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  text-align: CENTER;
+  padding: 3px;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(180px);
+}
+
+.compose {
+  background-color: #f6f6f6;
+  border-radius: 16px 16px 16px 16px;
+  width: 23%;
+  height: 70px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number2 {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  text-align: CENTER;
+  padding: 3px;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(555px);
+}
+
+.eat {
+  background-color: #f6f6f6;
+  border-radius: 16px 16px 16px 16px;
+  width: 23%;
+  height: 70px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number3 {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  text-align: CENTER;
+  padding: 3px;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+  transform: translate(920px);
+}
+
+.restaurants h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 32px;
+}/*# sourceMappingURL=style.css.map */
