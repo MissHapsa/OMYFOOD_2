@@ -145,8 +145,12 @@ main .city i {
   transform: translate(920px);
 }
 
-.restaurants h2 {
+.content h2 {
   font-size: 30px;
   font-weight: bold;
   padding-left: 32px;
+}
+
+.palette {
+  border: solid 2px blue;
 }/*# sourceMappingURL=style.css.map */
