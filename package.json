@@ -1,0 +1,19 @@
+{
+  "name": "o-my-food-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./SCSS/style.scss:./CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MissHapsa/O-MY-FOOD-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MissHapsa/O-MY-FOOD-2/issues"
+  },
+  "homepage": "https://github.com/MissHapsa/O-MY-FOOD-2#readme"
+}

@@ -37,6 +37,16 @@ box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
 margin-bottom: 2em;
 position: relative;
 }
+
+@mixin card-img {
+  width: 100%;
+  height: 175px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: auto;
+  object-fit: cover;
+}
+    
     
     
     
