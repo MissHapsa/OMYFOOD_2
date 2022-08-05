@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-@import "libs/mixins.scss";
+@import "C:\Users\bolly\Desktop\PROJETS HAPSA DEV\PROJET 3\O MY FOOD 2\SCSS\libs";
 
 body 
     margin: 0px;
@@ -85,12 +85,10 @@ main .city i
         transform: translate(920px);
 
 .content h2 
-    @include h2;
-    
-.palette 
-    border: solid 2px blue;
-    
+    @include h2; 
 
+.restaurants-card
+    @include card
     
 
 

@@ -150,7 +150,9 @@ main .city i {
   font-weight: bold;
   padding-left: 32px;
 }
+.content {
+  border: 2px solid red;
+}
 
-.palette {
-  border: solid 2px blue;
-}/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */

@@ -28,6 +28,16 @@
     font-weight: bold;
     padding-left: 32px;
 }
+
+@mixin card {
+background-color: #FFF;
+border-radius: 10px;
+width: 335px;
+box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+margin-bottom: 2em;
+position: relative;
+}
+    
     
     
 
