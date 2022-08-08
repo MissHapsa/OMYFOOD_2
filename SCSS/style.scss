@@ -86,10 +86,34 @@ main .city i {
         transform: translate(920px);}
 
 .content h2 {
-    @include h2; }
+    @include h2;}
 
 .restaurants-card {
-    @include card}
-    
-.restaurants-card img {
-    @include card-img}
+    @include card;}
+
+    .restaurants-card img {
+        @include card-img;}
+
+.contain1 {
+    @include display;
+    }
+
+.contain2 {
+    @extend .contain1
+    }
+        .restaurants-content_text h2 {
+            @include color;
+            padding-left: 15px;
+            font-size: 22px;
+            }
+        .restaurants-content_text p {
+            @include color;
+            padding-left: 15px
+            }
+        .restaurants-content_heart {
+            @include color;
+            padding-left: 250px;
+            }
+ 
+
+

@@ -46,7 +46,13 @@ position: relative;
   margin: auto;
   object-fit: cover;
 }
+
+@mixin color {
+    color: black;
+}
     
+
+
     
     
     

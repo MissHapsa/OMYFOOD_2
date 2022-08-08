@@ -169,4 +169,26 @@ main .city i {
   object-fit: cover;
 }
 
+.contain1, .contain2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurants-content_text h2 {
+  color: black;
+  padding-left: 15px;
+  font-size: 22px;
+}
+
+.restaurants-content_text p {
+  color: black;
+  padding-left: 15px;
+}
+
+.restaurants-content_heart {
+  color: black;
+  padding-left: 250px;
+}
+
 /*# sourceMappingURL=style.css.map */
