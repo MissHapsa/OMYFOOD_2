@@ -129,21 +129,25 @@ main .city i {
     @include display;
     background-color: #353535;
 }    
-    .footer_container {
-        display: flex;
-        flex-direction: column;
+        .footer_container {
+            display: flex;
+            flex-direction: column;
         }
-    .footer a {
-        color: white;
-        gap: 10rem;
-        }    
-    .footer h3 {
-        font-family: "Shrikhand", cursive;
-        text-align: center;
-        position: relative;
-        color: white;
-        @include display;
-        }
+                .footer a {
+                    color: white;
+                    gap: 10rem;
+                }    
+                .footer h3 {
+                    font-family: "Shrikhand", cursive;
+                    text-align: center;
+                    position: relative;
+                    color: white;
+                    @include display;
+                }
+                .href1 {
+                    padding: 0.5em;
+                    }
+            
 
 
 
