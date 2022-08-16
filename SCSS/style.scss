@@ -110,19 +110,24 @@ main .city i {
     }
         .restaurants-content_text h2 {
             @include color;
-            padding-left: 15px;
             font-size: 22px;
             align-items: center;
-            display: flex
-
-            }
+            display: flex;
+            margin-top: 0.3rem;
+}
         .restaurants-content_text p {
-            @include display;
-            padding-left: 15px
+            display: flex;
+            @include color;
+            margin-top: -1rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
             }
         .restaurants-content_heart {
             @include color;
- }
+            margin-left: 18rem;
+            margin-top: -4.8rem;
+        }
+ 
 
 .footer {
     border: 2px black solid;
@@ -132,21 +137,24 @@ main .city i {
         .footer_container {
             display: flex;
             flex-direction: column;
+            margin-bottom: 2rem;
         }
                 .footer a {
                     color: white;
-                    gap: 10rem;
+                    margin-left: 1rem;
+                    @include display;
                 }    
+
                 .footer h3 {
                     font-family: "Shrikhand", cursive;
                     text-align: center;
                     position: relative;
                     color: white;
                     @include display;
+                    font-size: 25px;
+                    margin-bottom: -0.1rem;
                 }
-                .href1 {
-                    padding: 0.5em;
-                    }
+               
             
 
 
