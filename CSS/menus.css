@@ -56,16 +56,17 @@ header {
   padding-right: 1rem;
 }
 
-.menu p {
+.menu_titre p {
   margin-top: -1rem;
+}
+
+.menu_price {
+  border: 1px solid grey;
 }
 
 .menu_price p {
   margin-left: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  margin-top: 2rem;
 }
 
 .footer {
