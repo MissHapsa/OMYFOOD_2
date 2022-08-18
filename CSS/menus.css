@@ -3,6 +3,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
 }
 
 header {
@@ -41,11 +42,12 @@ header {
   border-radius: 25px;
   padding-left: 1rem;
   margin-left: 1rem;
-  width: 95%;
+  width: 70%;
   height: 80px;
   gap: 1rem;
   display: flex;
   margin-bottom: 1rem;
+  background-color: white;
 }
 
 .titre h2 {
@@ -61,12 +63,25 @@ header {
 }
 
 .menu_price {
-  border: 1px solid grey;
+  margin-left: auto;
 }
 
 .menu_price p {
-  margin-left: 3rem;
-  margin-top: 2rem;
+  margin-top: 2.8rem;
+  font-weight: bold;
+}
+
+.check {
+  background-color: #99e2d0;
+  height: 79px;
+  width: 80px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 25px 25px 0;
+  font-size: 2rem;
+  display: none;
 }
 
 .btn {
