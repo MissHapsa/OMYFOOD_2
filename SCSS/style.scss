@@ -107,6 +107,7 @@ main .city i {
 
 .restaurants-content {
     height: 60px;
+    position: relative;
     }
         .restaurants-content_text h2 {
             @include color;
@@ -122,11 +123,26 @@ main .city i {
             margin-left: 2rem;
             margin-bottom: 2rem;
             }
-        .restaurants-content_heart {
+
+        .fa-heart {
             @include color;
-            margin-left: 18rem;
-            margin-top: -4.8rem;
+            right: 1rem;
+            top: 30%;
+            transform: translateY(-60%);
+            position: absolute;
+            font-size: 1.5rem;
         }
+             .fas {
+                color: transparent;
+                background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+                background-clip: text;
+                webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms;
+                }
+             .fas:hover {
+                opacity: 1;
+                }
  
 
 .footer {
@@ -143,6 +159,7 @@ main .city i {
                     color: white;
                     margin-left: 1rem;
                     @include display;
+                    padding: 0.1rem;
                 }    
 
                 .footer h3 {
@@ -150,6 +167,7 @@ main .city i {
                     text-align: center;
                     position: relative;
                     color: white;
+                    margin-left: 2rem;
                     @include display;
                     font-size: 25px;
                     margin-bottom: -0.1rem;
