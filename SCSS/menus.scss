@@ -5,8 +5,9 @@
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
-    background-color: #f6f6f6
-
+    background-color: #f6f6f6;
+    width: 70%;
+    margin-left: 15%;
 }
 
 header {
@@ -15,7 +16,11 @@ header {
     box-shadow: 0 0 8px rgb(0 0 0 /25%);
     padding: 2px;
     position: relative;}
-
+    .fa-arrow-left-long {
+        position: absolute;
+        left: 1rem;
+        bottom: 40%;
+    }
             .palettedugout img {
             max-width: 100%;
             max-height: 12rem;
@@ -35,17 +40,37 @@ header {
         font-family: "Shrikhand", cursive;
         padding: 1rem;
         font-size: 1.5rem;
+        margin-left: 3rem;
         }
+.heart {
+            @include color;
+            right: 1rem;
+            top: 4%;
+            transform: translateY(-80%);
+            position: absolute;
+            font-size: 1.5rem;
+        }
+        .fas {
+                color: transparent;
+                background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+                background-clip: text;
+                webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms;
+                }
+             .fas:hover {
+                opacity: 1;
+                }
 
 .menu_carte {
     border: solid 2px red;
     border-radius: 25px;
     padding-left: 1rem;
-    margin-left: 1rem;
-    width: 70%;
+    margin-left: 2rem;
+    width: 90%;
     height: 80px;
     gap: 1rem;
-    display: flex;
+    @include display;
     margin-bottom: 1rem;
     background-color: white;
 }
@@ -77,7 +102,6 @@ margin-top: -1rem
     display: none;
     }
 
-
 .btn {
     font-size: 30px;
     background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
@@ -86,7 +110,8 @@ margin-top: -1rem
     font-size: 16px;
     font-weight: bold;
     height: 48px;
-    width: 15%;
+    width: 25%;
+    margin-left: 39%;
     }
 
         
@@ -114,6 +139,7 @@ margin-top: -1rem
                     @include display;
                     font-size: 25px;
                     margin-bottom: -0.1rem;
+                    margin-left: 2rem;
                 }
                
             
