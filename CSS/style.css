@@ -22,7 +22,7 @@ main .city {
   gap: 16px;
 }
 
-main .city i {
+i {
   font-size: 22px;
 }
 
@@ -31,17 +31,14 @@ main .city i {
   background-color: #f6f6f6;
   padding-bottom: 32px;
 }
-
-.reservation h2 {
+.reservation .h2 {
   margin: 0px;
   padding-top: 32px;
   font-size: 30px;
 }
-
-.reservation p {
+.reservation .p {
   font-size: 16px;
 }
-
 .reservation button {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   border-radius: 32px 32px 32px 32px;
@@ -51,8 +48,7 @@ main .city i {
   height: 48px;
   width: 25%;
 }
-
-.reservation button:hover {
+.reservation::hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
@@ -65,11 +61,13 @@ main .city i {
 
 .cartes {
   display: flex;
-  gap: 100px;
-  padding-left: 200px;
+  gap: 115px;
+  padding-left: 180px;
 }
-
-.choice {
+.cartes::hover {
+  background-color: #eaeaea;
+}
+.cartes .choice {
   background-color: #f6f6f6;
   border-radius: 16px 16px 16px 16px;
   width: 23%;
@@ -78,13 +76,9 @@ main .city i {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-
-.cartes :hover {
-  background-color: thistle;
-}
-
-.number {
+.cartes .number {
   position: absolute;
   left: 0;
   width: 30px;
@@ -94,10 +88,9 @@ main .city i {
   background-color: #9356DC;
   color: #fff;
   border-radius: 50%;
-  transform: translate(180px);
+  transform: translate(-15px);
 }
-
-.compose {
+.cartes .compose {
   background-color: #f6f6f6;
   border-radius: 16px 16px 16px 16px;
   width: 23%;
@@ -106,9 +99,9 @@ main .city i {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-
-.number2 {
+.cartes .number2 {
   position: absolute;
   left: 0;
   width: 30px;
@@ -118,10 +111,9 @@ main .city i {
   background-color: #9356DC;
   color: #fff;
   border-radius: 50%;
-  transform: translate(555px);
+  transform: translate(-15px);
 }
-
-.eat {
+.cartes .eat {
   background-color: #f6f6f6;
   border-radius: 16px 16px 16px 16px;
   width: 23%;
@@ -130,9 +122,9 @@ main .city i {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-
-.number3 {
+.cartes .number3 {
   position: absolute;
   left: 0;
   width: 30px;
@@ -142,7 +134,7 @@ main .city i {
   background-color: #9356DC;
   color: #fff;
   border-radius: 50%;
-  transform: translate(920px);
+  transform: translate(-15px);
 }
 
 .menus h2 {
@@ -150,8 +142,7 @@ main .city i {
   font-weight: bold;
   padding-left: 32px;
 }
-
-.restaurants-card {
+.menus .restaurants-card {
   background-color: #FFF;
   border-radius: 10px;
   width: 335px;
@@ -160,8 +151,7 @@ main .city i {
   position: relative;
   height: 250px;
 }
-
-.restaurants-card img {
+.menus .restaurants-card img {
   width: 100%;
   height: 175px;
   border-top-left-radius: 10px;
@@ -169,36 +159,31 @@ main .city i {
   margin: auto;
   object-fit: cover;
 }
-
-.contain1, .contain2 {
+.menus .contain1, .menus .contain2 {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
 }
-
 .restaurants-content {
   height: 60px;
   position: relative;
 }
-
-.restaurants-content_text h2 {
+.restaurants-content .restaurants-content_text h2 {
   color: black;
   font-size: 22px;
   align-items: center;
   display: flex;
   margin-top: 0.3rem;
 }
-
-.restaurants-content_text p {
+.restaurants-content .restaurants-content_text p {
   display: flex;
   color: black;
   margin-top: -1rem;
   margin-left: 2rem;
   margin-bottom: 2rem;
 }
-
-.fa-heart {
+.restaurants-content .fa-heart {
   color: black;
   right: 1rem;
   top: 30%;
@@ -206,17 +191,15 @@ main .city i {
   position: absolute;
   font-size: 1.5rem;
 }
-
-.fas {
+.restaurants-content .fas {
   color: transparent;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   background-clip: text;
   webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms;
+  transition: all 50ms;
 }
-
-.fas:hover {
+.restaurants-content .fas:hover {
   opacity: 1;
 }
 

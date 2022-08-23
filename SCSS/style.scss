@@ -1,53 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import "libs/mixins.scss";
+@import "libs/variables.scss";
 
 body {
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: $fontprimary;
 }
 
 header {
-    font-family: "Shrikhand", cursive;
+    font-family: $fontsecondary;
     text-align: center;
     box-shadow: 0 0 8px rgb(0 0 0 /25%);
     padding: 2px;
     position: relative;}
 
-main .city {
-    background-color: #eaeaea;
+main 
+    .city {
+    background-color: $primarygrey;
     @include display;
     padding: 4px;
     gap: 16px;}
+        i {
+        font-size: 22px;}
 
-main .city i {
-    font-size: 22px;}
 
 .reservation {
    text-align: center;
-   background-color: #f6f6f6;
-   padding-bottom: 32px;}
-
-.reservation h2 {
+   background-color: $secondarygrey;
+   padding-bottom: 32px;
+    .h2 {
     margin: 0px;
     padding-top: 32px;
     font-size: 30px;}
-
-.reservation p {
-    font-size: 16px;}
-
-.reservation button {
-    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-    border-radius: 32px 32px 32px 32px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    height: 48px;
-    width: 25%;}
-
-.reservation button:hover {
+    .p {
+        font-size: 16px;}
+    button {
+            background-image: $radiant;
+            border-radius: 32px 32px 32px 32px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            height: 48px;
+            width: 25%;}
+        &::hover {
     transform: scale(1.02);
     opacity: 0.9;}
+}
   
 
 .howtodo h2 {
@@ -55,94 +54,89 @@ main .city i {
  
 .cartes {
     display: flex;
-    gap: 100px;
-    padding-left: 200px;}
+    gap: 115px;
+    padding-left: 180px;
 
-.choice {
+    &::hover {
+    background-color: $primarygrey;}
+    
+    .choice {
     @include fonctionnement;
-    @include display}
-   
-   .cartes :hover {
-    background-color: thistle;}
-  
-    .number {
+    @include display;
+    position: relative;}
+        .number {
     @include number;
-    transform: translate(180px);}
-
-.compose {
+    transform: translate(-15px);}
+    .compose {
     @include fonctionnement;
-    @include display;}
-   
-   .number2 {
+    @include display;
+    position: relative;}
+        .number2 {
     @include number;
-    transform: translate(555px);}
-
-.eat {
+    transform: translate(-15px);}
+    .eat {
     @include fonctionnement;
-    @include display;}
-   
-    .number3 {
+    @include display;
+    position: relative;}
+        .number3 {
         @include number;
-        transform: translate(920px);}
+        transform: translate(-15px);}
+}
 
-.menus h2 {
+.menus {
+    h2 {
     @include h2;}
 
-.restaurants-card {
-    @include card;
-    height: 250px;
-    }
-
-    .restaurants-card img {
+    .restaurants-card {
+        @include card;
+        height: 250px;}
+        .restaurants-card img {
         @include card-img;}
-
-.contain1 {
-    @include display;
-    gap: 3rem;
-    }
-
-.contain2 {
-    @extend .contain1
-    }
-
-.restaurants-content {
-    height: 60px;
-    position: relative;
-    }
-        .restaurants-content_text h2 {
-            @include color;
-            font-size: 22px;
-            align-items: center;
-            display: flex;
-            margin-top: 0.3rem;
-}
-        .restaurants-content_text p {
-            display: flex;
-            @include color;
-            margin-top: -1rem;
-            margin-left: 2rem;
-            margin-bottom: 2rem;
+        .contain1 {     
+            @include display;
+            gap: 3rem;
             }
+        .contain2 {
+            @extend .contain1
+            }
+}
 
-        .fa-heart {
-            @include color;
-            right: 1rem;
-            top: 30%;
-            transform: translateY(-60%);
-            position: absolute;
-            font-size: 1.5rem;
-        }
-             .fas {
-                color: transparent;
-                background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-                background-clip: text;
-                webkit-background-clip: text;
-                opacity: 0;
-                transition: all 200ms;
-                }
-             .fas:hover {
-                opacity: 1;
-                }
+        .restaurants-content {
+            height: 60px;
+            position: relative;
+                .restaurants-content_text h2 {
+                    @include color;
+                    font-size: 22px;
+                    align-items: center;
+                    display: flex;
+                    margin-top: 0.3rem;}
+                .restaurants-content_text p {
+                    display: flex;
+                    @include color;
+                    margin-top: -1rem;
+                    margin-left: 2rem;
+                    margin-bottom: 2rem;}
+                .fa-heart {
+                    @include color;
+                    right: 1rem;
+                    top: 30%;
+                    transform: translateY(-60%);
+                    position: absolute;
+                    font-size: 1.5rem;
+                    }
+                .fas {
+                    color: transparent;
+                    background-image: $radiant;
+                    background-clip: text;
+                    webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 50ms;
+                    }
+                    .fas:hover {
+                        opacity: 1;
+                        }
+}
+
 
 .footer {
     border: 2px black solid;
