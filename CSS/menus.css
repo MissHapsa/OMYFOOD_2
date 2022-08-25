@@ -18,7 +18,7 @@ header {
 
 .fa-arrow-left-long {
   position: absolute;
-  left: 1rem;
+  left: 16px;
   bottom: 40%;
 }
 
@@ -31,31 +31,27 @@ header {
 
 .menu {
   margin-top: -3.5rem;
-  border: solid 2px red;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
-  border-radius: 2rem 2rem 0 0;
-  height: 1400px;
+  border-radius: 32px 32px 0 0;
+  height: 1100px;
 }
-
 .menu h1 {
   font-family: "Shrikhand", cursive;
-  padding: 1rem;
+  padding: 16px;
   font-size: 1.5rem;
-  margin-left: 3rem;
+  margin-left: 48px;
 }
-
-.heart {
+.menu .heart {
   color: black;
-  right: 1rem;
+  right: 16px;
   top: 4%;
   transform: translateY(-80%);
   position: absolute;
   font-size: 1.5rem;
 }
-
-.fas {
+.menu .fas {
   color: transparent;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   background-clip: text;
@@ -63,48 +59,40 @@ header {
   opacity: 0;
   transition: all 200ms;
 }
-
-.fas:hover {
+.menu .fas:hover {
   opacity: 1;
 }
 
 .menu_carte {
-  border: solid 2px red;
   border-radius: 25px;
-  padding-left: 1rem;
-  margin-left: 2rem;
+  padding-left: 16px;
+  margin-left: 32px;
   width: 90%;
   height: 80px;
-  gap: 1rem;
+  gap: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   background-color: white;
 }
-
-.titre h2 {
-  padding: 1rem;
+.menu_carte:h2 {
+  padding: 16px;
 }
-
-.menu_titre {
-  padding-right: 1rem;
+.menu_carte .menu_titre {
+  padding-right: 16px;
 }
-
-.menu_titre p {
-  margin-top: -1rem;
+.menu_carte p {
+  margin-top: -16px;
 }
-
-.menu_price {
+.menu_carte .menu_price {
   margin-left: auto;
 }
-
-.menu_price p {
+.menu_carte:p {
   margin-top: 2.8rem;
   font-weight: bold;
 }
-
-.check {
+.menu_carte .check {
   background-color: #99e2d0;
   height: 79px;
   width: 80px;
@@ -113,7 +101,7 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 0 25px 25px 0;
-  font-size: 2rem;
+  font-size: 32px;
   display: none;
 }
 
@@ -127,10 +115,10 @@ header {
   height: 48px;
   width: 25%;
   margin-left: 39%;
+  margin-bottom: 16px;
 }
 
 .footer {
-  border: 2px black solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,12 +128,12 @@ header {
 .footer_container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .footer a {
   color: white;
-  margin-left: 1rem;
+  margin-left: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,7 +149,7 @@ header {
   align-items: center;
   font-size: 25px;
   margin-bottom: -0.1rem;
-  margin-left: 2rem;
+  margin-left: 32px;
 }
 
 /*# sourceMappingURL=menus.css.map */
