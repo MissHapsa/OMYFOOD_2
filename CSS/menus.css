@@ -130,16 +130,14 @@ header {
   flex-direction: column;
   margin-bottom: 32px;
 }
-
-.footer a {
+.footer_container a {
   color: white;
   margin-left: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.footer h3 {
+.footer_container h3 {
   font-family: "Shrikhand", cursive;
   text-align: center;
   position: relative;

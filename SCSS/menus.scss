@@ -119,20 +119,20 @@ margin-top: -$p16;
         
 .footer {
     @include display;
-    background-color: #353535;
-}    
+    background-color: $darkgrey;}
+  
         .footer_container {
             display: flex;
             flex-direction: column;
             margin-bottom: $p32;
-        }
-                .footer a {
+        
+                 a {
                     color: $wcolor;
                     margin-left: $p16;
                     @include display;
                 }    
 
-                .footer h3 {
+                 h3 {
                     font-family: $fontsecondary;
                     text-align: center;
                     position: relative;
@@ -142,6 +142,8 @@ margin-top: -$p16;
                     margin-bottom: -0.1rem;
                     margin-left: $p32;
                 }
+        }
+
                
             
 
