@@ -1,172 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import "libs/mixins.scss";
 @import "libs/variables.scss";
 
 body {
-    margin: 0;
-    font-family: $fontprimary;
+  margin: 0;
+  font-family: $fontprimary;
 }
 
 header {
-    font-family: $fontsecondary;
-    text-align: center;
-    box-shadow: 0 0 8px rgb(0 0 0 /25%);
-    padding: $p16 - 14px;
-    position: relative;}
+  font-family: $fontsecondary;
+  text-align: center;
+  box-shadow: 0 0 8px rgb(0 0 0 /25%);
+  padding: $p16 - 14px;
+  position: relative;
+}
 
-main 
-    .city {
-    background-color: $primarygrey;
-    @include display;
-    padding: 4px;
-    gap: $p16;}
-        i {
-        font-size: $p16 + 9px;}
-
+main .city {
+  background-color: $primarygrey;
+  @include display;
+  padding: 4px;
+  gap: $p16;
+}
+i {
+  font-size: $p16 + 9px;
+}
 
 .reservation {
-   text-align: center;
-   background-color: $secondarygrey;
-   padding-bottom: $p32;
-    .h2 {
+  text-align: center;
+  background-color: $secondarygrey;
+  padding-bottom: $p32;
+  .h2 {
     margin: 0px;
     padding-top: $p32;
-    font-size: $p32 - 2px;}
-    .p {
-        font-size: $p16;}
-    button {
-            background-image: $radiant;
-            border-radius: $p32 $p32 $p32 $p32;
-            color: white;
-            font-size: $p16;
-            font-weight: bold;
-            height: $p32 + 16px;
-            width: 25%;}
-        &::hover {
+    font-size: $p32 - 2px;
+  }
+  .p {
+    font-size: $p16;
+  }
+  button {
+    background-image: $radiant;
+    border-radius: $p32 $p32 $p32 $p32;
+    color: white;
+    font-size: $p16;
+    font-weight: bold;
+    height: $p32 + 16px;
+    width: 25%;
+  }
+  &::hover {
     transform: scale(1.02);
-    opacity: 0.9;}
+    opacity: 0.9;
+  }
 }
-  
 
 .howtodo h2 {
-    @include h2;}
- 
+  @include h2;
+}
+
 .cartes {
-    display: flex;
-    gap: 115px;
-    padding-left: 180px;
+  display: flex;
+  gap: 115px;
+  padding-left: 180px;
 
-    &::hover {
-    background-color: $primarygrey;}
-    
-    .choice {
+  &::hover {
+    background-color: $primarygrey;
+  }
+
+  .choice {
     @include fonctionnement;
     @include display;
-    position: relative;}
-        .number {
+    position: relative;
+  }
+  .number {
     @include number;
-    transform: translate(-15px);}
-    .compose {
+    transform: translate(-15px);
+  }
+  .compose {
     @include fonctionnement;
     @include display;
-    position: relative;}
-        .number2 {
+    position: relative;
+  }
+  .number2 {
     @include number;
-    transform: translate(-15px);}
-    .eat {
+    transform: translate(-15px);
+  }
+  .eat {
     @include fonctionnement;
     @include display;
-    position: relative;}
-        .number3 {
-        @include number;
-        transform: translate(-15px);}
+    position: relative;
+  }
+  .number3 {
+    @include number;
+    transform: translate(-15px);
+  }
 }
-    
+
 .menus {
-    h2 {
-    @include h2;}
+  h2 {
+    @include h2;
+  }
 
-    .restaurants-card {
-        @include card;
-        height: 250px;}
-        img {
-        @include card-img;}
-        .contain1 {     
-            @include display;
-            gap: $p32 + 16px;
-            }
-        .contain2 {
-            @extend .contain1
-            }
+  .restaurants-card {
+    @include card;
+    height: 250px;
+  }
+  img {
+    @include card-img;
+  }
+  .contain1 {
+    @include display;
+    gap: $p48;
+  }
+  .contain2 {
+    @extend .contain1;
+  }
 }
-
-        .restaurants-content {
-            height: 60px;
-            position: relative;
-                h2 {
-                    @include color;
-                    font-size: $p32 - 10px;
-                    align-items: center;
-                    display: flex;
-                    margin-top: 0.3rem;}
-                p {
-                    display: flex;
-                    @include color;
-                    margin-top: -$p16;
-                    margin-left: $p32;
-                    margin-bottom: $p32;}
-                .fa-heart {
-                    @include color;
-                    right: $p16;
-                    top: 30%;
-                    transform: translateY(-60%);
-                    position: absolute;
-                    font-size: 1.5rem;
-                    }
-                .fas {
-                    color: transparent;
-                    background-image: $radiant;
-                    background-clip: text;
-                    webkit-background-clip: text;
-                    opacity: 0;
-                    transition: all 50ms;
-                    }
-                    .fas:hover {
-                        opacity: 1;
-                        }
+.restaurants-content {
+  height: 60px;
+  position: relative;
+  h2 {
+    @include color;
+    font-size: $p32 - 10px;
+    align-items: center;
+    display: flex;
+    margin-top: 0.3rem;
+  }
+  p {
+    display: flex;
+    @include color;
+    margin-top: -$p16;
+    margin-left: $p32;
+    margin-bottom: $p32;
+  }
+  .fa-heart {
+    @include color;
+    right: $p16;
+    top: 30%;
+    transform: translateY(-60%);
+    position: absolute;
+    font-size: 1.5rem;
+  }
+  .fas {
+    color: transparent;
+    background-image: $radiant;
+    background-clip: text;
+    webkit-background-clip: text;
+    opacity: 0;
+    transition: all 50ms;
+  }
+  .fas:hover {
+    opacity: 1;
+  }
 }
-
 
 .footer {
-    border: 2px black solid;
-    @include display;
-    background-color: #353535;
-}    
-        .footer_container {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: $p32;
-        }
-                .footer a {
-                    color: white;
-                    margin-left: $p16;
-                    @include display;
-                    padding: 0.1rem;
-                }    
+  @include display;
+  background-color: $darkgrey;
+}
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $p32;
+}
+.footer a {
+  color: $wcolor;
+  margin-left: $p16;
+  @include display;
+  padding: 0.1rem;
+}
 
-                .footer h3 {
-                    font-family: "Shrikhand", cursive;
-                    text-align: center;
-                    position: relative;
-                    color: white;
-                    margin-left: $p32;
-                    @include display;
-                    font-size: $p32 - 7px;
-                    margin-bottom: -0.1rem;
-                }
-               
-            
-
-
-
+.footer h3 {
+  font-family: $fontsecondary;
+  text-align: center;
+  position: relative;
+  color: $wcolor;
+  margin-left: $p32;
+  @include display;
+  font-size: $p32 - 7px;
+  margin-bottom: -0.1rem;
+}

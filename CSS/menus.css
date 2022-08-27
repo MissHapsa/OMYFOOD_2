@@ -22,7 +22,7 @@ header {
   bottom: 40%;
 }
 
-.palettedugout img {
+img {
   max-width: 100%;
   max-height: 12rem;
   width: 100%;
@@ -36,6 +36,7 @@ header {
   position: relative;
   border-radius: 32px 32px 0 0;
   height: 1100px;
+  margin-bottom: 32px;
 }
 .menu h1 {
   font-family: "Shrikhand", cursive;
@@ -88,7 +89,7 @@ header {
 .menu_carte .menu_price {
   margin-left: auto;
 }
-.menu_carte:p {
+.menu_carte h5 {
   margin-top: 2.8rem;
   font-weight: bold;
 }
@@ -115,7 +116,7 @@ header {
   height: 48px;
   width: 25%;
   margin-left: 39%;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .footer {
@@ -130,24 +131,27 @@ header {
   flex-direction: column;
   margin-bottom: 32px;
 }
-.footer_container a {
+
+.footer a {
   color: white;
   margin-left: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.1rem;
 }
-.footer_container h3 {
+
+.footer h3 {
   font-family: "Shrikhand", cursive;
   text-align: center;
   position: relative;
   color: white;
+  margin-left: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px;
   margin-bottom: -0.1rem;
-  margin-left: 32px;
 }
 
 /*# sourceMappingURL=menus.css.map */

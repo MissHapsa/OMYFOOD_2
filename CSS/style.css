@@ -85,8 +85,8 @@ i {
   height: 30px;
   text-align: CENTER;
   padding: 3px;
-  background-color: #9356DC;
-  color: #fff;
+  background-color: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  color: white;
   border-radius: 50%;
   transform: translate(-15px);
 }
@@ -108,8 +108,8 @@ i {
   height: 30px;
   text-align: CENTER;
   padding: 3px;
-  background-color: #9356DC;
-  color: #fff;
+  background-color: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  color: white;
   border-radius: 50%;
   transform: translate(-15px);
 }
@@ -131,8 +131,8 @@ i {
   height: 30px;
   text-align: CENTER;
   padding: 3px;
-  background-color: #9356DC;
-  color: #fff;
+  background-color: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  color: white;
   border-radius: 50%;
   transform: translate(-15px);
 }
@@ -143,11 +143,11 @@ i {
   padding-left: 32px;
 }
 .menus .restaurants-card {
-  background-color: #FFF;
+  background-color: white;
   border-radius: 10px;
   width: 335px;
-  box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
-  margin-bottom: 2em;
+  box-shadow: -2px 5px 16px -4px black;
+  margin-bottom: 48px;
   position: relative;
   height: 250px;
 }
@@ -204,7 +204,6 @@ i {
 }
 
 .footer {
-  border: 2px black solid;
   display: flex;
   justify-content: center;
   align-items: center;

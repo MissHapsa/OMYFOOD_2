@@ -1,21 +1,21 @@
 @mixin number {
     position: absolute;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: $p32 - 2px;
+    height: $p32 - 2px;
     text-align: CENTER;
     padding: 3px;
-    background-color: #9356DC;
-    color: #fff;
+    background-color: $radiant;
+    color: $wcolor;
     border-radius: 50%;
 }
 
 @mixin  fonctionnement {
-    background-color: #f6f6f6;
-    border-radius: 16px 16px 16px 16px;
+    background-color: $secondarygrey;
+    border-radius: $p16 $p16 $p16 $p16;
     width: 23%;
     height: 70px;
-    gap: 20px;}
+    gap: $p16 + 4px;}
 
 @mixin display {
     display: flex;
@@ -24,17 +24,17 @@
 }
 
 @mixin h2 {
-    font-size: 30px;
+    font-size: $p32 - 2px;
     font-weight: bold;
-    padding-left: 32px;
+    padding-left: $p32;
 }
 
 @mixin card {
-background-color: #FFF;
+background-color: $wcolor;
 border-radius: 10px;
 width: 335px;
-box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
-margin-bottom: 2em;
+box-shadow: -2px 5px 16px -4px $bcolor;
+margin-bottom: $p48;
 position: relative;
 }
 
@@ -48,7 +48,7 @@ position: relative;
 }
 
 @mixin color {
-    color: black;
+    color: $bcolor;
 }
     
 

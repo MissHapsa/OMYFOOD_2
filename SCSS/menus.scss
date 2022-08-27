@@ -23,7 +23,7 @@ header {
         left: $p16;
         bottom: 40%;}
     
-        .palettedugout img {
+        img {
             max-width: 100%;
             max-height: 12rem;
             width: 100%;
@@ -37,6 +37,7 @@ header {
     position: relative;
     border-radius: $p32 $p32 0 0;
     height: 1100px;
+    margin-bottom: $p32;
   
     h1 {
         font-family: $fontsecondary;
@@ -84,10 +85,11 @@ header {
 margin-top: -$p16;
     }
 
-.menu_price {
-    margin-left: auto;
-    }
-    &:p {
+.menu_price 
+    {
+    margin-left: auto;}
+    
+    h5 {
    margin-top: 2.8rem;
    font-weight: bold;
     }
@@ -113,36 +115,36 @@ margin-top: -$p16;
     height: $p48;
     width: 25%;
     margin-left: 39%;
-    margin-bottom: $p16;
+    margin-bottom: $p32;
     }
 
         
 .footer {
     @include display;
-    background-color: $darkgrey;}
-  
+    background-color: #353535;
+}    
         .footer_container {
             display: flex;
             flex-direction: column;
             margin-bottom: $p32;
-        
-                 a {
+        }
+                .footer a {
                     color: $wcolor;
                     margin-left: $p16;
                     @include display;
+                    padding: 0.1rem;
                 }    
 
-                 h3 {
+                .footer h3 {
                     font-family: $fontsecondary;
                     text-align: center;
                     position: relative;
                     color: $wcolor;
-                    @include display;
-                    font-size: $p25;
-                    margin-bottom: -0.1rem;
                     margin-left: $p32;
+                    @include display;
+                    font-size: $p32 - 7px;
+                    margin-bottom: -0.1rem;
                 }
-        }
 
                
             
