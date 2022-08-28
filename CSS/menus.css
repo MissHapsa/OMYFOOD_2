@@ -7,6 +7,12 @@ body {
   width: 70%;
   margin-left: 15%;
 }
+@media (max-width: 992px) {
+  body {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 
 header {
   font-family: "Shrikhand", cursive;
@@ -63,6 +69,24 @@ img {
 .menu .fas:hover {
   opacity: 1;
 }
+.menu .title {
+  width: 95%;
+}
+.menu .title .title-underline {
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 5px;
+  width: 6%;
+}
+@media (max-width: 992px) {
+  .menu .title {
+    margin-left: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .menu .title {
+    margin-left: 16px;
+  }
+}
 
 .menu_carte {
   border-radius: 25px;
@@ -80,8 +104,19 @@ img {
 .menu_carte:h2 {
   padding: 16px;
 }
+@media (max-width: 768px) {
+  .menu_carte {
+    margin-left: 20px;
+    padding-left: 0px;
+  }
+}
 .menu_carte .menu_titre {
   padding-right: 16px;
+}
+@media (max-width: 768px) {
+  .menu_carte .menu_titre {
+    margin-left: 16px;
+  }
 }
 .menu_carte p {
   margin-top: -16px;
@@ -90,8 +125,9 @@ img {
   margin-left: auto;
 }
 .menu_carte h5 {
-  margin-top: 2.8rem;
+  margin-top: 48px;
   font-weight: bold;
+  font-size: 16px;
 }
 .menu_carte .check {
   background-color: #99e2d0;
@@ -103,7 +139,7 @@ img {
   align-items: center;
   border-radius: 0 25px 25px 0;
   font-size: 32px;
-  display: none;
+  transition: transform 500ms, -webkit-transform 500ms;
 }
 
 .btn {
@@ -117,6 +153,12 @@ img {
   width: 25%;
   margin-left: 39%;
   margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .btn {
+    width: 40%;
+    margin-left: 30%;
+  }
 }
 
 .footer {

@@ -50,6 +50,28 @@ position: relative;
 @mixin color {
     color: $bcolor;
 }
+
+@mixin sm {
+    @media ( max-width: map-get ($breakpoints, "sm")) {
+        @content;
+        } 
+}
+
+@mixin mob {
+    @media ( max-width: $mob) {
+      @content;} 
+}
+
+@mixin tab {
+    @media ( max-width: $tab) {
+        @content;} 
+}
+
+@mixin desk {
+    @media ( max-width: $desk) {
+        @content;} 
+}
+    
     
 
 

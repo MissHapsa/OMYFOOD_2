@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-@import "libs/mixins.scss";
-@import "libs/variables.scss";
+@import "./libs/mixins.scss";
+@import "./libs/variables.scss";
 
 body {
     margin: 0;
@@ -9,7 +9,12 @@ body {
     background-color: $secondarygrey;
     width: 70%;
     margin-left: 15%;
+    @include tab {
+        width: 100%;
+        margin-left: 0;
+    }
 }
+
 
 header {
     font-family: $fontsecondary;
@@ -64,7 +69,18 @@ header {
              .fas:hover {
                 opacity: 1;
                 }
-}
+.title {
+    width: 95%;
+    .title-underline {
+    border-bottom: 3px solid $green;
+    padding-bottom: 5px;
+    width: 6%;}
+        @include tab {
+        margin-left: $p16;}
+        @include mob {
+            margin-left: $p16;}
+        }
+} 
 .menu_carte {
     border-radius: $p25;
     padding-left: $p16;
@@ -78,20 +94,30 @@ header {
     &:h2 {
     padding: $p16;
     }
+    
+    @include mob {
+        margin-left: 20px;
+        padding-left: 0px;
+    }
+
 .menu_titre {
-     padding-right: $p16;
+    padding-right: $p16;
+    @include mob {
+        margin-left: $p16;
     }
+}
     p {
-margin-top: -$p16;
-    }
+    margin-top: -$p16;
+}
 
 .menu_price 
     {
     margin-left: auto;}
     
     h5 {
-   margin-top: 2.8rem;
+   margin-top: $p48;
    font-weight: bold;
+   font-size: $p16;
     }
         .check {
     background-color: $green;
@@ -101,9 +127,9 @@ margin-top: -$p16;
     @include display;
     border-radius: 0 $p25 $p25 0;
     font-size: $p32;
-    display: none;
-    }
+    transition: transform 500ms, -webkit-transform 500ms }
 }
+
 
 .btn {
     font-size: $p32 - 2px;
@@ -116,6 +142,10 @@ margin-top: -$p16;
     width: 25%;
     margin-left: 39%;
     margin-bottom: $p32;
+    @include mob {
+        width: 40%;
+        margin-left: 30%;
+    }
     }
 
         
