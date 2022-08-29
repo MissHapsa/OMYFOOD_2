@@ -12,6 +12,13 @@ header {
   padding: 2px;
   position: relative;
 }
+@media (max-width: 768px) {
+  header {
+    margin-top: -10px;
+    margin-bottom: -10px;
+    box-shadow: none;
+  }
+}
 
 main .city {
   background-color: #eaeaea;
@@ -20,6 +27,20 @@ main .city {
   align-items: center;
   padding: 4px;
   gap: 16px;
+}
+@media (max-width: 768px) {
+  main .city {
+    padding: 0;
+    margin-top: -14px;
+    margin-bottom: -20px;
+    height: 40px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  main .city i {
+    font-size: 14px;
+  }
 }
 
 i {
@@ -31,13 +52,23 @@ i {
   background-color: #f6f6f6;
   padding-bottom: 32px;
 }
-.reservation .h2 {
+.reservation h2 {
   margin: 0px;
   padding-top: 32px;
   font-size: 30px;
 }
-.reservation .p {
+@media (max-width: 768px) {
+  .reservation h2 {
+    font-size: 22px;
+  }
+}
+.reservation p {
   font-size: 16px;
+}
+@media (max-width: 768px) {
+  .reservation p {
+    font-size: 17px;
+  }
 }
 .reservation button {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
@@ -47,6 +78,16 @@ i {
   font-weight: bold;
   height: 48px;
   width: 25%;
+}
+@media (max-width: 992px) {
+  .reservation button {
+    width: 32%;
+  }
+}
+@media (max-width: 768px) {
+  .reservation button {
+    width: 62%;
+  }
 }
 .reservation::hover {
   transform: scale(1.02);
@@ -58,13 +99,33 @@ i {
   font-weight: bold;
   padding-left: 32px;
 }
+@media (max-width: 768px) {
+  .howtodo h2 {
+    padding-left: 20px;
+  }
+}
 
 .cartes {
   display: flex;
   gap: 115px;
   padding-left: 180px;
 }
-.cartes::hover {
+@media (max-width: 992px) {
+  .cartes {
+    padding-left: 40px;
+    gap: 95px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .cartes {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.cartes i {
+  padding-left: 20px;
+}
+.cartes:hover {
   background-color: #eaeaea;
 }
 .cartes .choice {
@@ -78,17 +139,34 @@ i {
   align-items: center;
   position: relative;
 }
-.cartes .number {
+@media (max-width: 768px) {
+  .cartes .choice {
+    width: 100%;
+    margin-left: -20px;
+    margin-bottom: 16px;
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .cartes .choice i {
+    padding-left: 0;
+  }
+}
+.cartes .choice p {
+  margin: 16px;
+  gap: 16px;
+}
+.cartes .choice .number {
   position: absolute;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   text-align: CENTER;
-  padding: 3px;
-  background-color: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  padding: 0px;
+  background-color: #9356DC;
   color: white;
   border-radius: 50%;
-  transform: translate(-15px);
+  transform: translate(-25px);
 }
 .cartes .compose {
   background-color: #f6f6f6;
@@ -101,17 +179,30 @@ i {
   align-items: center;
   position: relative;
 }
+@media (max-width: 768px) {
+  .cartes .compose {
+    width: 100%;
+    margin-left: -20px;
+    margin-bottom: 16px;
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .cartes .compose i {
+    margin-left: -65px;
+  }
+}
 .cartes .number2 {
   position: absolute;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   text-align: CENTER;
-  padding: 3px;
-  background-color: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  padding: 0px;
+  background-color: #9356DC;
   color: white;
   border-radius: 50%;
-  transform: translate(-15px);
+  transform: translate(-9px);
 }
 .cartes .eat {
   background-color: #f6f6f6;
@@ -124,23 +215,46 @@ i {
   align-items: center;
   position: relative;
 }
+@media (max-width: 768px) {
+  .cartes .eat {
+    width: 100%;
+    margin-left: -20px;
+    margin-bottom: 16px;
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .cartes .eat i {
+    margin-left: -60px;
+  }
+}
 .cartes .number3 {
   position: absolute;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 21px;
+  height: 21px;
   text-align: CENTER;
-  padding: 3px;
-  background-color: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  padding: 0px;
+  background-color: #9356DC;
   color: white;
   border-radius: 50%;
-  transform: translate(-15px);
+  transform: translate(-9px);
 }
 
+@media (max-width: 768px) {
+  .menus {
+    margin-bottom: 32px;
+  }
+}
 .menus h2 {
   font-size: 30px;
   font-weight: bold;
   padding-left: 32px;
+}
+@media (max-width: 768px) {
+  .menus h2 {
+    padding-left: 20px;
+  }
 }
 .menus .restaurants-card {
   background-color: white;
@@ -150,6 +264,11 @@ i {
   margin-bottom: 48px;
   position: relative;
   height: 250px;
+}
+@media (max-width: 768px) {
+  .menus .restaurants-card {
+    margin-bottom: 8px;
+  }
 }
 .menus img {
   width: 100%;
@@ -165,6 +284,18 @@ i {
   align-items: center;
   gap: 48px;
 }
+@media (max-width: 768px) {
+  .menus .contain1, .menus .contain2 {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .menus .contain2 {
+    margin-top: 16px;
+  }
+}
+
 .restaurants-content {
   height: 60px;
   position: relative;
@@ -209,20 +340,80 @@ i {
   align-items: center;
   background-color: #353535;
 }
+@media (max-width: 768px) {
+  .footer {
+    padding-right: 170px;
+    font-size: 12px;
+  }
+}
 
 .footer_container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
-.footer a {
+.footer .ustensils {
+  color: white;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0.1rem;
+}
+@media (max-width: 768px) {
+  .footer .ustensils {
+    margin-left: -3px;
+    width: 100%;
+  }
+}
+.footer .help {
+  color: white;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0.1rem;
+}
+@media (max-width: 768px) {
+  .footer .help {
+    margin-left: -29px;
+    gap: 9px;
+  }
+}
+@media (max-width: 768px) {
+  .footer .fas {
+    font-size: 16px;
+  }
+}
+.footer .mentions {
   color: white;
   margin-left: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.1rem;
+}
+@media (max-width: 768px) {
+  .footer .mentions {
+    margin-left: -64px;
+  }
+}
+.footer .mail {
+  color: white;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0.1rem;
+}
+@media (max-width: 768px) {
+  .footer .mail {
+    margin-left: -111px;
+  }
 }
 
 .footer h3 {
@@ -236,6 +427,12 @@ i {
   align-items: center;
   font-size: 25px;
   margin-bottom: -0.1rem;
+}
+@media (max-width: 768px) {
+  .footer h3 {
+    margin-left: -50px;
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

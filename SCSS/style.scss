@@ -14,6 +14,11 @@ header {
   box-shadow: 0 0 8px rgb(0 0 0 /25%);
   padding: $p16 - 14px;
   position: relative;
+  @include mob {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  box-shadow: none;
+  }
 }
 
 main .city {
@@ -21,6 +26,17 @@ main .city {
   @include display;
   padding: 4px;
   gap: $p16;
+  @include mob {
+    padding: 0;
+    margin-top: -14px;
+    margin-bottom: -20px;
+    height: 40px;
+    font-size: 10px;
+    i {
+       @include mob {
+  font-size: $p16 - 2px;
+  }}
+  }
 }
 i {
   font-size: $p16 + 9px;
@@ -30,13 +46,19 @@ i {
   text-align: center;
   background-color: $secondarygrey;
   padding-bottom: $p32;
-  .h2 {
+  h2 {
     margin: 0px;
     padding-top: $p32;
     font-size: $p32 - 2px;
+     @include mob {
+      font-size: $p16 + 6px;
+    }
   }
-  .p {
+  p {
     font-size: $p16;
+     @include mob {
+      font-size: $p16 + 1;
+    }
   }
   button {
     background-image: $radiant;
@@ -46,6 +68,12 @@ i {
     font-weight: bold;
     height: $p32 + 16px;
     width: 25%;
+    @include tab {
+      width: 32%;
+    }
+    @include mob {
+      width: 62%;
+    }
   }
   &::hover {
     transform: scale(1.02);
@@ -55,54 +83,110 @@ i {
 
 .howtodo h2 {
   @include h2;
+   @include mob {
+      padding-left: $p16 + 4px;
+    }
 }
 
 .cartes {
   display: flex;
   gap: 115px;
   padding-left: 180px;
-
-  &::hover {
+  @include tab {
+  padding-left: $p48 - 8px;
+  gap: 95px;
+  @include mob {
+  flex-direction: column;
+  gap: 0;}
+  }
+  i {
+    padding-left: $p16 + 4px;}
+  &:hover {
     background-color: $primarygrey;
   }
-
   .choice {
     @include fonctionnement;
     @include display;
     position: relative;
-  }
+    @include mob {
+      width: 100%;
+      margin-left: -20px;
+      margin-bottom: $p16;
+      height: 60px;
+    }
+  i {
+    @include mob {
+      padding-left: 0;
+    }
+    }
+  p {
+    margin: $p16;
+    gap: $p16;}
   .number {
     @include number;
-    transform: translate(-15px);
+    transform: translate(-25px);
+  }
   }
   .compose {
     @include fonctionnement;
     @include display;
     position: relative;
+     @include mob {
+      width: 100%;
+      margin-left: -20px;
+      margin-bottom: $p16;
+      height: 60px;
+    }
+    i {
+    @include mob {
+      margin-left: -65px;
+    }
+    }
   }
   .number2 {
     @include number;
-    transform: translate(-15px);
+    transform: translate(-9px);
   }
   .eat {
     @include fonctionnement;
     @include display;
     position: relative;
+     @include mob {
+      width: 100%;
+      margin-left: -20px;
+      margin-bottom: $p16;
+      height: 60px;
+    }
+    i {
+    @include mob {
+      margin-left: -60px;
+    }
+    }
   }
   .number3 {
     @include number;
-    transform: translate(-15px);
+    transform: translate(-9px);
   }
 }
 
 .menus {
+  @include mob {
+    margin-bottom: $p32;
+  }
   h2 {
     @include h2;
+    @include mob {
+      padding-left: $p16 + 4px;
+    }
   }
 
   .restaurants-card {
     @include card;
     height: 250px;
+    @include mob 
+    {
+      margin-bottom: 8px;
+      }
   }
   img {
     @include card-img;
@@ -110,9 +194,16 @@ i {
   .contain1 {
     @include display;
     gap: $p48;
+  @include mob {
+    flex-direction: column;
+    gap: $p16;
+  }
   }
   .contain2 {
     @extend .contain1;
+    @include mob {
+      margin-top: $p16;
+    }
   }
 }
 .restaurants-content {
@@ -156,19 +247,60 @@ i {
 .footer {
   @include display;
   background-color: $darkgrey;
+   @include mob {
+    padding-right: 170px;
+    font-size: $p16 - 4px;
+  }
 }
 .footer_container {
   display: flex;
   flex-direction: column;
-  margin-bottom: $p32;
+  margin-bottom: $p32 + 4px;
 }
-.footer a {
+.footer {
+  .ustensils {
   color: $wcolor;
   margin-left: $p16;
   @include display;
+  gap: $p16;
   padding: 0.1rem;
+  @include mob {
+  margin-left: -3px;
+  width: 100%;
+}}
+  .help {  
+  color: $wcolor;
+  margin-left: $p16;
+  @include display;
+  gap: $p16;
+  padding: 0.1rem;
+  @include mob {
+  margin-left: -29px;
+  gap: 9px;}
 }
-
+  .fas {
+    @include mob
+    { font-size: $p16;
+      }}
+  .mentions {
+    color: $wcolor;
+  margin-left: $p16;
+  @include display;
+  padding: 0.1rem;
+  @include mob {
+  margin-left: -64px;
+    }
+}
+  .mail {
+    color: $wcolor;
+  margin-left: $p16;
+  @include display;
+  gap: 16px;
+  padding: 0.1rem;
+  @include mob {
+  margin-left: -111px;}
+}
+}
 .footer h3 {
   font-family: $fontsecondary;
   text-align: center;
@@ -178,4 +310,8 @@ i {
   @include display;
   font-size: $p32 - 7px;
   margin-bottom: -0.1rem;
+  @include mob {
+  margin-left: -$p48 - 2;
+  font-size: $p16;
+}
 }

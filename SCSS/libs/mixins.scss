@@ -1,11 +1,11 @@
 @mixin number {
     position: absolute;
     left: 0;
-    width: $p32 - 2px;
-    height: $p32 - 2px;
+    width: $p16 + 5px;
+    height: $p16 + 5px;
     text-align: CENTER;
-    padding: 3px;
-    background-color: $radiant;
+    padding: 0px;
+    background-color:  #9356DC;
     color: $wcolor;
     border-radius: 50%;
 }
