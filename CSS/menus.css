@@ -89,6 +89,7 @@ img {
 }
 
 .menu_carte {
+  cursor: pointer;
   border-radius: 25px;
   padding-left: 16px;
   margin-left: 32px;
@@ -129,20 +130,52 @@ img {
   font-weight: bold;
   font-size: 16px;
 }
-.menu_carte .check {
+
+.box {
+  overflow: hidden;
+  text-align: center;
+  background: #99E2D0;
+  border-radius: 0 25px 25px 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 79px;
+  -webkit-transition: width 2s;
+  -o-transition: width 2s;
+  transition: width 2s;
+  animation-name: box;
+  animation-duration: 2s;
+}
+.box:hover {
+  width: 0px;
+}
+@keyframes box {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 75px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+.box .check {
   background-color: #99e2d0;
   height: 79px;
-  width: 80px;
+  width: 0px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0 25px 25px 0;
   font-size: 32px;
+  animation-name: box;
+  animation-duration: 2s;
+  transform: rotate(360deg);
   transition: transform 500ms, -webkit-transform 500ms;
 }
-
-.btn {
+.box .btn {
   font-size: 30px;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   border-radius: 32px 32px 32px 32px;
@@ -155,26 +188,23 @@ img {
   margin-bottom: 32px;
 }
 @media (max-width: 768px) {
-  .btn {
+  .box .btn {
     width: 40%;
     margin-left: 30%;
   }
 }
-
-.footer {
+.box .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #353535;
 }
-
-.footer_container {
+.box .footer_container {
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
 }
-
-.footer a {
+.box .footer a {
   color: white;
   margin-left: 16px;
   display: flex;
@@ -182,8 +212,7 @@ img {
   align-items: center;
   padding: 0.1rem;
 }
-
-.footer h3 {
+.box .footer h3 {
   font-family: "Shrikhand", cursive;
   text-align: center;
   position: relative;
