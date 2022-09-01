@@ -49,25 +49,17 @@ header {
         font-size: 1.5rem;
         margin-left: $p48;
         }
-    .heart {
+    .fa-heart {
             @include color;
-            right: $p16;
+            right: 65px;
             top: 4%;
             transform: translateY(-80%);
             position: absolute;
             font-size: 1.5rem;
-        }
-        .fas {
-                color: transparent;
-                background-image: $radiant;
-                background-clip: text;
-                webkit-background-clip: text;
-                opacity: 0;
-                transition: all 200ms;
-                }
-             .fas:hover {
-                opacity: 1;
-                }
+            &:hover {
+               color: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+                transition-duration: 1s;}}
+     
 .title {
     width: 95%;
     .title-underline {
@@ -78,8 +70,8 @@ header {
         margin-left: $p16;}
         @include mob {
             margin-left: $p16;}
-        }
-} 
+        }}
+
 .menu_carte {
     cursor: pointer;
     border-radius: $p25;
@@ -158,9 +150,8 @@ animation-duration: 2s;
     animation-duration: 2s;
     transform: rotate(360deg);
     transition: transform 500ms, -webkit-transform 500ms;
-    }
+    }}
     
-
 .btn {
     font-size: $p32 - 2px;
     background-image: $radiant;
@@ -174,40 +165,76 @@ animation-duration: 2s;
     margin-bottom: $p32;
     @include mob {
         width: 40%;
-        margin-left: 30%;
-    }
-    }
+        margin-left: 30%;}}
 
-        
-.footer {
-    @include display;
-    background-color: #353535;
-}    
-        .footer_container {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: $p32;
-        }
-                .footer a {
-                    color: $wcolor;
-                    margin-left: $p16;
-                    @include display;
-                    padding: 0.1rem;
-                }    
+ .footer {
+  @include display;
+  background-color: $darkgrey;
+   @include mob {
+    padding-right: 170px;
+    font-size: $p16 - 4px;
+  }
+  .ustensils {
+  color: $wcolor;
+  margin-left: $p16;
+  @include display;
+  gap: $p16;
+  padding: 0.1rem;
+  text-decoration:none;
+  @include mob {
+  margin-left: -3px;
+  width: 100%;}}
 
-                .footer h3 {
-                    font-family: $fontsecondary;
-                    text-align: center;
-                    position: relative;
-                    color: $wcolor;
-                    margin-left: $p32;
-                    @include display;
-                    font-size: $p32 - 7px;
-                    margin-bottom: -0.1rem;
-                }}
-
-               
-            
-
-
-
+  .help {  
+  color: $wcolor;
+  margin-left: $p16;
+  @include display;
+  gap: $p16;
+  padding: 0.1rem;
+  text-decoration:none;
+  @include mob {
+  margin-left: -29px;
+  gap: 9px;}
+}
+  .fas {
+    @include mob
+    { font-size: $p16;
+      }}
+  .mentions {
+    color: $wcolor;
+  margin-left: $p16;
+  @include display;
+  padding: 0.1rem;
+  text-decoration:none;
+  @include mob {
+  margin-left: -64px;
+    }}
+  .mail {
+    color: $wcolor;
+  margin-left: $p16;
+  @include display;
+  gap: 16px;
+  padding: 0.1rem;
+  text-decoration:none;
+  @include mob {
+  margin-left: -111px;}
+}
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $p32 + 4px;
+}
+h3 {
+  font-family: $fontsecondary;
+  text-align: center;
+  position: relative;
+  color: $wcolor;
+  margin-left: $p32;
+  @include display;
+  font-size: $p32 - 7px;
+  margin-bottom: -0.1rem;
+  @include mob {
+  margin-left: -$p48 - 2;
+  font-size: $p16;
+}}
+ }
