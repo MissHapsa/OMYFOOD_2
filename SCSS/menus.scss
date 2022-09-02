@@ -82,7 +82,7 @@ header {
     gap: $p16;
     @include display;
     margin-bottom: $p16;
-    background-color: white;
+    background-color: white; 
     &:h2 {
     padding: $p16;
     }
@@ -120,14 +120,15 @@ border-radius: 0 $p25 $p25 0;
 -ms-flex-align: center;
 align-items: center;
 height: 79px;
+
+&:hover {
+animation: boxanimation 1s;
 -webkit-transition: width 2s;
 -o-transition: width 2s;
 transition: width 2s;
-animation-name: box;
+animation-name: boxanimation;
 animation-duration: 2s;
-&:hover {
-    width: 0px;
-    @keyframes box {
+    @keyframes boxanimation {
   0% {
     width: 0px;
   }
@@ -146,7 +147,7 @@ animation-duration: 2s;
     @include display;
     border-radius: 0 $p25 $p25 0;
     font-size: $p32;
-    animation-name: box;
+    animation-name: boxanimation;
     animation-duration: 2s;
     transform: rotate(360deg);
     transition: transform 500ms, -webkit-transform 500ms;

@@ -133,16 +133,16 @@ img {
   -ms-flex-align: center;
   align-items: center;
   height: 79px;
+}
+.box:hover {
+  animation: boxanimation 1s;
   -webkit-transition: width 2s;
   -o-transition: width 2s;
   transition: width 2s;
-  animation-name: box;
+  animation-name: boxanimation;
   animation-duration: 2s;
 }
-.box:hover {
-  width: 0px;
-}
-@keyframes box {
+@keyframes boxanimation {
   0% {
     width: 0px;
   }
@@ -163,7 +163,7 @@ img {
   align-items: center;
   border-radius: 0 25px 25px 0;
   font-size: 32px;
-  animation-name: box;
+  animation-name: boxanimation;
   animation-duration: 2s;
   transform: rotate(360deg);
   transition: transform 500ms, -webkit-transform 500ms;
