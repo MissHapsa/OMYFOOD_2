@@ -93,17 +93,20 @@ header {
 
 .menu_titre {
     padding-right: $p16;
+    width: 100%;
+    overflow: hidden;
     @include mob {
-        margin-left: $p16;
-    }
+    margin-left: $p16;}
 }
-    p {
+  p {
     margin-top: -$p16;
 }
-
-.menu_price 
+  .menu_price 
     {
-    margin-left: auto;}
+    height: 79px;
+    margin-bottom: 30px;
+    margin-right: 24px;
+    }
     
     h5 {
    margin-top: $p48;
@@ -112,16 +115,31 @@ header {
     }
     }
     .box {
+margin-right: -4.5rem;
 overflow: hidden;
+opacity: 1;
 text-align: center;
 background: #99E2D0;
 border-radius: 0 $p25 $p25 0;
 -webkit-box-align: center;
 -ms-flex-align: center;
 align-items: center;
-height: 79px;
+height: 80px;
+width: 80px;
 
-&:hover {
+    .check {
+    background-color: $green;
+    height: 79px;
+    opacity: 1;
+    color: $wcolor;
+    @include display;
+    border-radius: 0 $p25 $p25 0;
+    font-size: $p32;
+    animation-name: boxanimation;
+    animation-duration: 2s;
+    transform: rotate(360deg);
+    transition: transform 500ms, -webkit-transform 500ms;
+    &:hover {
 animation: boxanimation 1s;
 -webkit-transition: width 2s;
 -o-transition: width 2s;
@@ -139,19 +157,7 @@ animation-duration: 2s;
     width: 0px;
   }
 }}
-    .check {
-    background-color: $green;
-    height: 79px;
-    width: 0px;
-    color: $wcolor;
-    @include display;
-    border-radius: 0 $p25 $p25 0;
-    font-size: $p32;
-    animation-name: boxanimation;
-    animation-duration: 2s;
-    transform: rotate(360deg);
-    transition: transform 500ms, -webkit-transform 500ms;
-    }}
+}}
     
 .btn {
     font-size: $p32 - 2px;

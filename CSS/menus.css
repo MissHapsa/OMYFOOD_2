@@ -106,6 +106,8 @@ img {
 }
 .menu_carte .menu_titre {
   padding-right: 16px;
+  width: 100%;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .menu_carte .menu_titre {
@@ -116,7 +118,9 @@ img {
   margin-top: -16px;
 }
 .menu_carte .menu_price {
-  margin-left: auto;
+  height: 79px;
+  margin-bottom: 30px;
+  margin-right: 24px;
 }
 .menu_carte h5 {
   margin-top: 48px;
@@ -125,16 +129,34 @@ img {
 }
 
 .box {
+  margin-right: -4.5rem;
   overflow: hidden;
+  opacity: 1;
   text-align: center;
   background: #99E2D0;
   border-radius: 0 25px 25px 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 79px;
+  height: 80px;
+  width: 80px;
 }
-.box:hover {
+.box .check {
+  background-color: #99e2d0;
+  height: 79px;
+  opacity: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 25px 25px 0;
+  font-size: 32px;
+  animation-name: boxanimation;
+  animation-duration: 2s;
+  transform: rotate(360deg);
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+.box .check:hover {
   animation: boxanimation 1s;
   -webkit-transition: width 2s;
   -o-transition: width 2s;
@@ -152,21 +174,6 @@ img {
   100% {
     width: 0px;
   }
-}
-.box .check {
-  background-color: #99e2d0;
-  height: 79px;
-  width: 0px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 25px 25px 0;
-  font-size: 32px;
-  animation-name: boxanimation;
-  animation-duration: 2s;
-  transform: rotate(360deg);
-  transition: transform 500ms, -webkit-transform 500ms;
 }
 
 .btn {
