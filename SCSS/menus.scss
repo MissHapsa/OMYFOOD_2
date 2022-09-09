@@ -6,169 +6,175 @@
 
 
 body {
-    margin: 0;
-    font-family: $fontprimary;
-    background-color: $secondarygrey;
-    width: 70%;
-    margin-left: 15%;
+  margin: 0;
+  font-family: $fontprimary;
+  background-color: $secondarygrey;
+  width: 70%;
+  margin-left: 15%;
     @include tab {
-        width: 100%;
-        margin-left: 0;
-    }
+      width: 100%;
+      margin-left: 0;}
 }
-
 header {
-    font-family: $fontsecondary;
-    text-align: center;
-    box-shadow: 0 0 8px rgb(0 0 0 /25%);
-    padding: 2px;
-    position: relative;}
-
-    .fa-arrow-left-long {
-        position: absolute;
-        left: $p16;
-        bottom: 40%;}
-    
-        img {
-            max-width: 100%;
-            max-height: 12rem;
-            width: 100%;
-            object-fit: cover;
-            }       
-.menu {
+  font-family: $fontsecondary;
+  text-align: center;
+  box-shadow: 0 0 8px rgb(0 0 0 /25%);
+  padding: 2px;
+  position: relative;
+}
+  .fa-arrow-left-long {
+    position: absolute;
+    left: $p16;
+    bottom: 40%;
+  }
+    img {
+      max-width: 100%;
+      max-height: 12rem;
+      width: 100%;
+      object-fit: cover;
+    }       
+  .menu {
     margin-top: -3.5rem;
     background-color: $secondarygrey;
     z-index: 1;
     position: relative;
     border-radius: $p32 $p32 0 0;
-    height: 1200px;
+    height: 1225px;
     margin-bottom: $p32;
-    h1 {
+      h1 {
         font-family: $fontsecondary;
         padding: $p16;
         font-size: 1.5rem;
         margin-left: 5px;
-        }
-.menu_heart {
-  display: flex;
-  justify-content: space-between;
-  right: 30px;
-  font-size: 22px;
-    .fa-stack {
+      }
+      .menu_heart {
+        display: flex;
+        justify-content: space-between;
+        right: 30px;
+        font-size: 22px;
+          .fa-stack {
+            display: flex;
+            font-size: 24px;
+            top: 25px;
+            right: 15px;
+            width: 24px;
+            height: 24px;
+            color: black;
+            cursor: pointer;
+            @include tab {
+              right: 57px;
+            }
+            @include mob {
+              right: 18px;
+            }
+          }
+          .fa-stack .bgnone {
+            opacity: 0;
+          }
+            &:hover i {
+              animation: heart 600ms forwards;
+              background: linear-gradient(#9356dc, #ff79da);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+      }
+      .title {
+        width: 95%;
+          .title-underline {
+            border-bottom: 3px solid $green;
+            padding-bottom: 5px;
+            width: 10%;}
+            @include tab {
+              margin-left: $p16;}
+            @include mob {
+              margin-left: $p16;}
+      }
+    .btn_carte {
       display: flex;
-      font-size: 24px;
-  top: 15px;
-  right: 15px;
-  width: 24px;
-  height: 24px;
-  color: black;
-  cursor: pointer;
-}
-.fa-stack .bgnone {
-  opacity: 0;
-}
-.fa-stack:hover i {
-  animation: heart 600ms forwards;
-  background: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}}
-     
-.title {
-    width: 95%;
-    .title-underline {
-    border-bottom: 3px solid $green;
-    padding-bottom: 5px;
-    width: 6%;}
-        @include tab {
-        margin-left: $p16;}
-        @include mob {
-            margin-left: $p16;}
-        }
-.btn_carte {
-  display: flex;
-  overflow: hidden;
-  background-color: #fff;
-  border-radius: 15px;
-  padding-left: 15px;
-  height: 80px;
-  margin-bottom: 20px;
-  transform: scale(1);
-  cursor: pointer;
-  @include tab {
-    width: 85%;
-    margin-left: 43px;}
-  @include mob {
-    width: 85%;
-    margin-left: 22px;
+      overflow: hidden;
+      background-color: #fff;
+      border-radius: 15px;
+      padding-left: 15px;
+      height: 80px;
+      margin-bottom: 20px;
+      transform: scale(1);
+      cursor: pointer;
+      @include tab {
+        width: 85%;
+        margin-left: 50px;}
+      @include mob {
+        width: 86%;
+        margin-left: 18px;
     }   
-&:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  transform: scale(1.03);
-  transition: 350ms;
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        transform: scale(1.03);
+        transition: 350ms;
+      }
+      &:hover .btn_card_favorite {
+        width: 15%;
+        @include tab {
+          width: 20%;}
+        @include mob {
+          width: 20%;}
+      }
+      &:hover .btn_card_favorite .fa-circle-check {
+        animation: rotate 1000ms forwards;
+      }
+      .btn_card_favorite {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #99e2d0;
+        height: 100%;
+        order: 2;
+        width: 0%;
+        transition: all 550ms cubic-bezier(0.47, 0.15, 0, 1);
+      }
+      .btn_card .fa-circle-check {
+        font-size: 24px;
+        color: #fff;
+      }
+      .btn_card_text {
+        display: flex;
+        flex-flow: column;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+  .btn_card {
+    display: flex;
+    width: 100%;
+    h3 {
+      font-family: roboto, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0;
+    }
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: roboto, sans-serif;
+      font-size: 14px;
+    }
+  }
+    .btn_price {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-family: roboto, sans-serif;
+      font-size: $p16;
+      font-weight: bold;
+      height: 100%;
+      padding-right: 15px;
+    }
+  }
 }
-&:hover .btn__body__favorite {
-  width: 15%;
-  @include tab {
-  width: 20%;}
-  @include mob {
-  width: 20%;}
-        }
-
-&:hover .btn__body__favorite .fa-circle-check {
-  animation: rotate 1000ms forwards;
-}
-.btn__body__favorite {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #99e2d0;
-  height: 100%;
-  order: 2;
-  width: 0%;
-  transition: all 550ms cubic-bezier(0.47, 0.15, 0, 1);
-}
-.btn__body .fa-circle-check {
-  font-size: 24px;
-  color: #fff;
-}
-.btn__body__gras {
-  display: flex;
-  flex-flow: column;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-}
-.btn__body {
-  display: flex;
-  width: 100%;
-  h3 {
-  font-family: roboto, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 0;
-}
-  p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: roboto, sans-serif;
-  font-size: 14px;
-}}
-.btn__price {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  font-family: roboto, sans-serif;
-  font-size: $p16;
-  font-weight: bold;
-  height: 100%;
-  padding-right: 15px;
-}}}
 .btn {
     font-size: $p32 - 2px;
     background-image: $radiant;
@@ -183,16 +189,15 @@ header {
     @include mob {
         width: 40%;
         margin-left: 30%;}
-  &:hover {
-    transform: scale(1)
-    
-    }
-    
+    &:hover {
+      transform: scale(1.05)
+    }    
 }
 
- .footer {
+.footer {
   @include display;
   background-color: $darkgrey;
+  margin-bottom: 8px;
   @include mob {
     padding-right: 170px;
     font-size: $p16 - 4px;
@@ -205,8 +210,8 @@ header {
       padding: 0.1rem;
       text-decoration:none;
         @include mob {
-        margin-left: -3px;
-        width: 100%;}
+          margin-left: -3px;
+          width: 100%;}
     }
     .help {  
       color: $wcolor;
@@ -216,13 +221,14 @@ header {
       padding: 0.1rem;
       text-decoration:none;
       @include mob {
-      margin-left: -29px;
-      gap: 9px;}
+        margin-left: -29px;
+        gap: 9px;}
     }
-  .fas {
+    .fas {
     @include mob {
-    font-size: $p16;
-    }}
+      font-size: $p16;
+      }
+    } 
   .mentions {
     color: $wcolor;
     margin-left: $p16;
@@ -230,8 +236,9 @@ header {
     padding: 0.1rem;
     text-decoration:none;
     @include mob {
-    margin-left: -64px;
-    }}
+      margin-left: -64px;
+    }
+  }
   .mail {
     color: $wcolor;
     margin-left: $p16;
@@ -240,24 +247,27 @@ header {
     padding: 0.1rem;
     text-decoration:none;
     @include mob {
-    margin-left: -111px;}
+      margin-left: -111px;
+    }
   }
-.footer_container {
+  .footer_container {
     display: flex;
     flex-direction: column;
     margin-bottom: $p32 + 4px;
   }
-  h3 {
-    font-family: $fontsecondary;
-    text-align: center;
-    position: relative;
-    color: $wcolor;
-    margin-left: $p32;
-    @include display;
-    font-size: $p32 - 7px;
-    margin-bottom: -0.1rem;
-    @include mob {
-    margin-left: -$p48 - 2;
-    font-size: $p16;
-  }}
+    h3 {
+      font-family: $fontsecondary;
+      text-align: center;
+      position: relative;
+      color: $wcolor;
+      margin-left: $p32;
+      @include display;
+        font-size: $p32 - 7px;
+        margin-bottom: -0.1rem;
+      @include mob {
+        margin-left: -64px;
+        font-size: $p16;
+        margin-bottom: 12px;
+      }
+    }
 }
