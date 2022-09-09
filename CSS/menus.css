@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @keyframes heart {
@@ -24,25 +25,26 @@
     opacity: 1;
   }
 }
-@keyframes dish {
+@keyframes transition {
   0% {
+    margin-top: -70px;
     opacity: 0;
-    transform: rotate(0deg);
-  }
-  25% {
-    opacity: 1;
-    transform: rotate(90deg);
-  }
-  50% {
-    opacity: 1;
-    transform: rotate(180deg);
-  }
-  75% {
-    opacity: 1;
-    transform: rotate(270deg);
   }
   100% {
+    margin-top: 0;
     opacity: 1;
+  }
+}
+div {
+  opacity: 0;
+  animation: transition 2s ease-in-out 200ms forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -81,14 +83,49 @@ img {
   object-fit: cover;
 }
 
+.entrées {
+  margin: 15px 15px 15px 15px;
+  animation: transition 200ms forwards;
+}
+
+@media (min-width: 1440px) {
+  .entrées {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+}
+.plats {
+  margin: 15px 15px 15px 15px;
+  animation: apparition 1000ms both 1000ms;
+}
+
+@media (min-width: 1440px) {
+  .plats {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+}
+.desserts {
+  margin: 15px 15px 15px 15px;
+  animation: apparition 1000ms both 2000ms;
+}
+
+@media (min-width: 1440px) {
+  .desserts {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+}
 .menu {
   margin-top: -3.5rem;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
   border-radius: 32px 32px 0 0;
-  height: 1225px;
-  margin-bottom: 32px;
+  height: 1115px;
 }
 .menu h1 {
   font-family: "Shrikhand", cursive;
@@ -156,7 +193,7 @@ img {
   background-color: #fff;
   border-radius: 15px;
   padding-left: 15px;
-  height: 80px;
+  height: 70px;
   margin-bottom: 20px;
   transform: scale(1);
   cursor: pointer;
@@ -234,6 +271,7 @@ img {
   text-overflow: ellipsis;
   font-family: roboto, sans-serif;
   font-size: 14px;
+  margin-top: 3px;
 }
 .menu .btn_carte .btn_price {
   display: flex;
@@ -256,7 +294,8 @@ img {
   height: 48px;
   width: 25%;
   margin-left: 39%;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .btn {

@@ -32,15 +32,50 @@ header {
       max-height: 12rem;
       width: 100%;
       object-fit: cover;
-    }       
+    }
+  // animation delay 
+  .entrées {
+  margin: 15px 15px 15px 15px;
+  animation: transition 200ms forwards;
+}
+@media (min-width: 1440px) {
+  .entrées {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+}
+
+.plats {
+  margin: 15px 15px 15px 15px;
+  animation: apparition 1000ms both 1000ms;
+}
+@media (min-width: 1440px) {
+  .plats {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+}
+
+.desserts {
+  margin: 15px 15px 15px 15px;
+  animation: apparition 1000ms both 2000ms;
+}
+@media (min-width: 1440px) {
+  .desserts {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+}
   .menu {
     margin-top: -3.5rem;
     background-color: $secondarygrey;
     z-index: 1;
     position: relative;
     border-radius: $p32 $p32 0 0;
-    height: 1225px;
-    margin-bottom: $p32;
+    height: 1115px;
       h1 {
         font-family: $fontsecondary;
         padding: $p16;
@@ -96,7 +131,7 @@ header {
       background-color: #fff;
       border-radius: 15px;
       padding-left: 15px;
-      height: 80px;
+      height: 70px;
       margin-bottom: 20px;
       transform: scale(1);
       cursor: pointer;
@@ -161,6 +196,7 @@ header {
       text-overflow: ellipsis;
       font-family: roboto, sans-serif;
       font-size: 14px;
+      margin-top: 3px;
     }
   }
     .btn_price {
@@ -185,7 +221,8 @@ header {
     height: $p48;
     width: 25%;
     margin-left: 39%;
-    margin-bottom: $p32;
+    margin-bottom: $p32 + 4px;
+    cursor: pointer;
     @include mob {
         width: 40%;
         margin-left: 30%;}

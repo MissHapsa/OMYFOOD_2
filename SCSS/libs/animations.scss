@@ -18,29 +18,27 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
-@keyframes dish {
+  
+@keyframes transition {
+0%   { 
+  margin-top: -70px;opacity:0; 
+  }
+100% { 
+  margin-top: 0;opacity:1; 
+  }
+}
+div {opacity:0;animation: transition 2s ease-in-out 200ms forwards;}
+
+@keyframes spin {
   0% {
-    opacity: 0;
     transform: rotate(0deg);
-  }
-  25% {
-    opacity: 1;
-    transform: rotate(90deg);
-  }
-  50% {
-    opacity: 1;
-    transform: rotate(180deg);
-  }
-  75% {
-    opacity: 1;
-    transform: rotate(270deg);
-  }
+    } 
   100% {
-    opacity: 1;
     transform: rotate(360deg);
-  }
-}
+    }
+    }
