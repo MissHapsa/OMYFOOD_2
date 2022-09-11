@@ -37,23 +37,14 @@
 }
 div {
   opacity: 0;
-  animation: transition 2s ease-in-out 200ms forwards;
+  animation: transition 1s ease-in-out 200ms forwards;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 body {
   margin: 0;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   background-color: #f6f6f6;
-  width: 70%;
-  margin-left: 15%;
 }
 @media (max-width: 992px) {
   body {
@@ -68,12 +59,17 @@ header {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   padding: 2px;
   position: relative;
+  width: 99.7%;
 }
 
 .fa-arrow-left-long {
   position: absolute;
-  left: 16px;
+  left: 20px;
   bottom: 40%;
+  cursor: pointer;
+}
+.fa-arrow-left-long:hover {
+  transform: scale(1.05);
 }
 
 img {
@@ -120,18 +116,20 @@ img {
   }
 }
 .menu {
+  width: 85%;
+  margin-left: 90px;
   margin-top: -3.5rem;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
   border-radius: 32px 32px 0 0;
-  height: 1115px;
+  height: auto;
 }
 .menu h1 {
   font-family: "Shrikhand", cursive;
-  padding: 16px;
+  padding-top: 16px;
   font-size: 1.5rem;
-  margin-left: 5px;
+  margin-left: 4px;
 }
 .menu .menu_heart {
   display: flex;
@@ -142,10 +140,10 @@ img {
 .menu .menu_heart .fa-stack {
   display: flex;
   font-size: 24px;
-  top: 25px;
+  top: 20px;
   right: 15px;
   width: 24px;
-  height: 24px;
+  height: 36px;
   color: black;
   cursor: pointer;
 }
@@ -169,9 +167,6 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu .title {
-  width: 95%;
-}
 .menu .title .title-underline {
   border-bottom: 3px solid #99e2d0;
   padding-bottom: 5px;
@@ -188,11 +183,13 @@ img {
   }
 }
 .menu .btn_carte {
+  margin-left: 75px;
   display: flex;
   overflow: hidden;
   background-color: #fff;
   border-radius: 15px;
   padding-left: 15px;
+  width: 80%;
   height: 70px;
   margin-bottom: 20px;
   transform: scale(1);
@@ -304,7 +301,7 @@ img {
   }
 }
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .footer {
@@ -312,7 +309,7 @@ img {
   justify-content: center;
   align-items: center;
   background-color: #353535;
-  margin-bottom: 8px;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .footer {

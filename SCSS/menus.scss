@@ -7,10 +7,9 @@
 
 body {
   margin: 0;
+  width: 100%;
   font-family: $fontprimary;
   background-color: $secondarygrey;
-  width: 70%;
-  margin-left: 15%;
     @include tab {
       width: 100%;
       margin-left: 0;}
@@ -21,17 +20,22 @@ header {
   box-shadow: 0 0 8px rgb(0 0 0 /25%);
   padding: 2px;
   position: relative;
+  width: 99.7%;
 }
   .fa-arrow-left-long {
     position: absolute;
-    left: $p16;
+    left: 20px;
     bottom: 40%;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);}
   }
     img {
       max-width: 100%;
       max-height: 12rem;
       width: 100%;
       object-fit: cover;
+
     }
   // animation delay 
   .entrées {
@@ -69,18 +73,22 @@ header {
     width: 25%;
   }
 }
+// fin delay
+
   .menu {
+    width: 85%;
+    margin-left: 90px;
     margin-top: -3.5rem;
     background-color: $secondarygrey;
     z-index: 1;
     position: relative;
     border-radius: $p32 $p32 0 0;
-    height: 1115px;
+    height: auto;
       h1 {
         font-family: $fontsecondary;
-        padding: $p16;
+        padding-top: $p16;
         font-size: 1.5rem;
-        margin-left: 5px;
+        margin-left: 4px;
       }
       .menu_heart {
         display: flex;
@@ -90,10 +98,10 @@ header {
           .fa-stack {
             display: flex;
             font-size: 24px;
-            top: 25px;
+            top: 20px;
             right: 15px;
             width: 24px;
-            height: 24px;
+            height: 36px;
             color: black;
             cursor: pointer;
             @include tab {
@@ -115,7 +123,6 @@ header {
             }
       }
       .title {
-        width: 95%;
           .title-underline {
             border-bottom: 3px solid $green;
             padding-bottom: 5px;
@@ -126,11 +133,13 @@ header {
               margin-left: $p16;}
       }
     .btn_carte {
+      margin-left: 75px;
       display: flex;
       overflow: hidden;
       background-color: #fff;
       border-radius: 15px;
       padding-left: 15px;
+      width: 80%;
       height: 70px;
       margin-bottom: 20px;
       transform: scale(1);
@@ -227,14 +236,16 @@ header {
         width: 40%;
         margin-left: 30%;}
     &:hover {
-      transform: scale(1.05)
+      transform: scale(1.03);
+      
     }    
 }
 
 .footer {
   @include display;
   background-color: $darkgrey;
-  margin-bottom: 8px;
+
+  width: 100%;
   @include mob {
     padding-right: 170px;
     font-size: $p16 - 4px;

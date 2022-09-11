@@ -32,13 +32,7 @@
   margin-top: 0;opacity:1; 
   }
 }
-div {opacity:0;animation: transition 2s ease-in-out 200ms forwards;}
+div {opacity:0;animation: transition 1s ease-in-out 200ms forwards;}
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    } 
-  100% {
-    transform: rotate(360deg);
-    }
-    }
+
+      
