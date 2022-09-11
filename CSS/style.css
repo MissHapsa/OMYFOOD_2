@@ -104,6 +104,7 @@ i {
   font-weight: bold;
   height: 48px;
   width: 25%;
+  cursor: pointer;
 }
 @media (max-width: 992px) {
   .reservation button {
@@ -115,8 +116,8 @@ i {
     width: 62%;
   }
 }
-.reservation::hover {
-  transform: scale(1.02);
+.reservation button::hover {
+  transform: scale(1.03);
   opacity: 0.9;
 }
 
@@ -321,6 +322,9 @@ i {
   margin: auto;
   object-fit: cover;
 }
+.menus a {
+  text-decoration: none;
+}
 .menus .contain1, .menus .contain2 {
   display: flex;
   justify-content: center;
@@ -387,20 +391,15 @@ i {
   justify-content: center;
   align-items: center;
   background-color: #353535;
+  animation: apparition 1900ms both 2200ms;
+  width: 100%;
+  margin-top: -13px;
 }
 @media (max-width: 768px) {
   .footer {
-    padding-right: 170px;
     font-size: 12px;
   }
 }
-
-.footer_container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 36px;
-}
-
 .footer .ustensils {
   color: white;
   margin-left: 16px;
@@ -467,7 +466,16 @@ i {
     margin-left: -111px;
   }
 }
-
+.footer .footer_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+@media (max-width: 768px) {
+  .footer .footer_container {
+    margin-left: -190px;
+  }
+}
 .footer h3 {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -482,7 +490,7 @@ i {
 }
 @media (max-width: 768px) {
   .footer h3 {
-    margin-left: -50px;
+    margin-left: -62px;
     font-size: 16px;
   }
 }

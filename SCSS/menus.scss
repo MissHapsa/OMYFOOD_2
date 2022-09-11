@@ -13,6 +13,10 @@ body {
     @include tab {
       width: 100%;
       margin-left: 0;}
+    @include mob {
+      width: 100%;
+      margin-left: 0;
+    }
 }
 header {
   font-family: $fontsecondary;
@@ -21,6 +25,12 @@ header {
   padding: 2px;
   position: relative;
   width: 99.7%;
+  @include mob {
+    width: 99%;
+  }
+  @include tab {
+    width: 99.5%;
+  }
 }
   .fa-arrow-left-long {
     position: absolute;
@@ -40,7 +50,7 @@ header {
   // animation delay 
   .entrées {
   margin: 15px 15px 15px 15px;
-  animation: transition 200ms forwards;
+  animation: transition 100ms forwards;
 }
 @media (min-width: 1440px) {
   .entrées {
@@ -52,7 +62,13 @@ header {
 
 .plats {
   margin: 15px 15px 15px 15px;
-  animation: apparition 1000ms both 1000ms;
+  animation: apparition 300ms both 400ms;
+  @include mob {
+    margin: 0;
+  }
+  @include tab {
+    margin: 0;
+  }
 }
 @media (min-width: 1440px) {
   .plats {
@@ -64,7 +80,13 @@ header {
 
 .desserts {
   margin: 15px 15px 15px 15px;
-  animation: apparition 1000ms both 2000ms;
+  animation: apparition 1200ms both 1500ms;
+  @include mob {
+    margin: 0;
+  }
+  @include tab {
+    margin: 0;
+  }
 }
 @media (min-width: 1440px) {
   .desserts {
@@ -84,17 +106,37 @@ header {
     position: relative;
     border-radius: $p32 $p32 0 0;
     height: auto;
+    @media (min-width: 992px) {
+    margin-left: 56px;
+    }
+    @media (max-width: 1024px) {
+    margin-left: 0px;
+    width: 100%;
+    }
+    
       h1 {
         font-family: $fontsecondary;
         padding-top: $p16;
         font-size: 1.5rem;
         margin-left: 4px;
+        @include mob {
+          margin-left: 16px;
+        }
+        @include tab {
+          margin-left: 16px;
+        }
       }
       .menu_heart {
         display: flex;
         justify-content: space-between;
         right: 30px;
         font-size: 22px;
+        @include mob {
+          width: 100%;
+        }
+         {
+          width: 93%;
+        }
           .fa-stack {
             display: flex;
             font-size: 24px;
@@ -104,12 +146,9 @@ header {
             height: 36px;
             color: black;
             cursor: pointer;
-            @include tab {
-              right: 57px;
-            }
-            @include mob {
-              right: 18px;
-            }
+            @media ( max-width: 768px ) {
+              top: 25px
+              right: 34px;}
           }
           .fa-stack .bgnone {
             opacity: 0;
@@ -123,6 +162,9 @@ header {
             }
       }
       .title {
+        @include mob {
+          margin: 0;
+        }
           .title-underline {
             border-bottom: 3px solid $green;
             padding-bottom: 5px;
@@ -139,16 +181,16 @@ header {
       background-color: #fff;
       border-radius: 15px;
       padding-left: 15px;
-      width: 80%;
+      width: 100%;
       height: 70px;
       margin-bottom: 20px;
       transform: scale(1);
       cursor: pointer;
       @include tab {
-        width: 85%;
+        width: 80%;
         margin-left: 50px;}
       @include mob {
-        width: 86%;
+        width: 87%;
         margin-left: 18px;
     }   
       &:hover {
@@ -232,22 +274,23 @@ header {
     margin-left: 39%;
     margin-bottom: $p32 + 4px;
     cursor: pointer;
+    animation: apparition 1600ms both 1800ms;
     @include mob {
         width: 40%;
         margin-left: 30%;}
     &:hover {
-      transform: scale(1.03);
-      
+      transform: scale(1.01);
+      opacity: 0.9;
     }    
 }
 
 .footer {
   @include display;
   background-color: $darkgrey;
-
+  animation: apparition 1900ms both 2200ms;
   width: 100%;
+  margin-top: -13px;
   @include mob {
-    padding-right: 170px;
     font-size: $p16 - 4px;
   }
     .ustensils {
@@ -302,6 +345,9 @@ header {
     display: flex;
     flex-direction: column;
     margin-bottom: $p32 + 4px;
+    @include mob {
+      margin-left: -190px;
+    }
   }
     h3 {
       font-family: $fontsecondary;
@@ -313,9 +359,8 @@ header {
         font-size: $p32 - 7px;
         margin-bottom: -0.1rem;
       @include mob {
-        margin-left: -64px;
+        margin-left: -62px;
         font-size: $p16;
-        margin-bottom: 12px;
       }
     }
 }

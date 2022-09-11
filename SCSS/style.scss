@@ -96,18 +96,16 @@ i {
     font-weight: bold;
     height: $p32 + 16px;
     width: 25%;
+    cursor: pointer;
     @include tab {
       width: 32%;
     }
     @include mob {
-      width: 62%;
-    }
-  }
+      width: 62%;}
   &::hover {
-    transform: scale(1.02);
-    opacity: 0.9;
-  }
-}
+    transform: scale(1.03);
+    opacity: 0.9;}
+}}
 
 .howtodo h2 {
   @include h2;
@@ -129,7 +127,6 @@ i {
   }
   i {
     padding-left: $p16 + 4px;}
-
   .choice {
     @include fonctionnement;
     @include display;
@@ -228,29 +225,31 @@ i {
   .restaurants-card {
     @include card;
     height: 250px;
-    @include mob 
-    {
+    @include mob {
       margin-bottom: 8px;
       }
-  }
-  img {
+    }
+    img {
     @include card-img;
-  }
-  .contain1 {
+    }
+    a {
+      text-decoration: none;
+      }
+    .contain1 {
     @include display;
     gap: $p48;
-  @include mob {
+    @include mob {
     flex-direction: column;
     gap: $p16;
-  }
-  }
-  .contain2 {
+    }
+    }
+    .contain2 {
     @extend .contain1;
     @include mob {
       margin-top: $p16;
     }
+    }
   }
-}
 .restaurants-content {
   height: 60px;
   position: relative;
@@ -295,75 +294,80 @@ i {
 .footer {
   @include display;
   background-color: $darkgrey;
-   @include mob {
-    padding-right: 170px;
+  animation: apparition 1900ms both 2200ms;
+  width: 100%;
+  margin-top: -13px;
+  @include mob {
     font-size: $p16 - 4px;
   }
-}
-.footer_container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: $p32 + 4px;
-}
-.footer {
-  .ustensils {
-  color: $wcolor;
-  margin-left: $p16;
-  @include display;
-  gap: $p16;
-  padding: 0.1rem;
-  text-decoration:none;
-  @include mob {
-  margin-left: -3px;
-  width: 100%;
-}}
-  .help {  
-  color: $wcolor;
-  margin-left: $p16;
-  @include display;
-  gap: $p16;
-  padding: 0.1rem;
-  text-decoration:none;
-  @include mob {
-  margin-left: -29px;
-  gap: 9px;}
-}
-  .fas {
-    @include mob
-    { font-size: $p16;
-      }}
+    .ustensils {
+      color: $wcolor;
+      margin-left: $p16;
+      @include display;
+      gap: $p16;
+      padding: 0.1rem;
+      text-decoration:none;
+        @include mob {
+          margin-left: -3px;
+          width: 100%;}
+    }
+    .help {  
+      color: $wcolor;
+      margin-left: $p16;
+      @include display;
+      gap: $p16;
+      padding: 0.1rem;
+      text-decoration:none;
+      @include mob {
+        margin-left: -29px;
+        gap: 9px;}
+    }
+    .fas {
+    @include mob {
+      font-size: $p16;
+      }
+    } 
   .mentions {
     color: $wcolor;
-  margin-left: $p16;
-  @include display;
-  padding: 0.1rem;
-  text-decoration:none;
-  @include mob {
-  margin-left: -64px;
+    margin-left: $p16;
+    @include display;
+    padding: 0.1rem;
+    text-decoration:none;
+    @include mob {
+      margin-left: -64px;
     }
-}
+  }
   .mail {
     color: $wcolor;
-  margin-left: $p16;
-  @include display;
-  gap: 16px;
-  padding: 0.1rem;
-  text-decoration:none;
-  @include mob {
-  margin-left: -111px;}
-}
-}
-.footer h3 {
-  font-family: $fontsecondary;
-  text-align: center;
-  position: relative;
-  color: $wcolor;
-  margin-left: $p32;
-  @include display;
-  font-size: $p32 - 7px;
-  margin-bottom: -0.1rem;
-  @include mob {
-  margin-left: -$p48 - 2;
-  font-size: $p16;
-}
+    margin-left: $p16;
+    @include display;
+    gap: 16px;
+    padding: 0.1rem;
+    text-decoration:none;
+    @include mob {
+      margin-left: -111px;
+    }
+  }
+  .footer_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $p32 + 4px;
+    @include mob {
+      margin-left: -190px;
+    }
+  }
+    h3 {
+      font-family: $fontsecondary;
+      text-align: center;
+      position: relative;
+      color: $wcolor;
+      margin-left: $p32;
+      @include display;
+        font-size: $p32 - 7px;
+        margin-bottom: -0.1rem;
+      @include mob {
+        margin-left: -62px;
+        font-size: $p16;
+      }
+    }
 }
