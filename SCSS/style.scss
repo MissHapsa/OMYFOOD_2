@@ -102,8 +102,8 @@ i {
     }
     @include mob {
       width: 62%;}
-  &::hover {
-    transform: scale(1.03);
+  &:hover {
+    transform: scale(1.01);
     opacity: 0.9;}
 }}
 

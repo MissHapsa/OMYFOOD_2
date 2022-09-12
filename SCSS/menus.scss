@@ -5,7 +5,7 @@
 @import "./libs/animations.scss";
 
 
-body {
+  body {
   margin: 0;
   width: 100%;
   font-family: $fontprimary;
@@ -17,86 +17,76 @@ body {
       width: 100%;
       margin-left: 0;
     }
-}
-header {
-  font-family: $fontsecondary;
-  text-align: center;
-  box-shadow: 0 0 8px rgb(0 0 0 /25%);
-  padding: 2px;
-  position: relative;
-  width: 99.7%;
-  @include mob {
+      // header
+  header {
+    font-family: $fontsecondary;
+    text-align: center;
+    box-shadow: 0 0 8px rgb(0 0 0 /25%);
+    padding: 2px;
+    position: relative;
+    width: 99.7%;
+    @include mob {
     width: 99%;
-  }
-  @include tab {
+    }
+    @include tab {
     width: 99.5%;
+    }
   }
-}
-  .fa-arrow-left-long {
-    position: absolute;
-    left: 20px;
-    bottom: 40%;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.05);}
-  }
+    .fa-arrow-left-long {
+      position: absolute;
+      left: 20px;
+      bottom: 40%;
+      cursor: pointer;
+      &:hover {
+      transform: scale(1.1);}
+    }
     img {
       max-width: 100%;
       max-height: 12rem;
       width: 100%;
       object-fit: cover;
-
     }
-  // animation delay 
-  .entrées {
-  margin: 15px 15px 15px 15px;
-  animation: transition 100ms forwards;
-}
-@media (min-width: 1440px) {
+      // fin header
+
+      // animation delay 
   .entrées {
     display: flex;
     flex-direction: column;
     width: 25%;
+    margin: 15px 15px 15px 15px;
+    animation: transition 100ms forwards;
+    @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    width: 25%;}
   }
-}
-
-.plats {
-  margin: 15px 15px 15px 15px;
-  animation: apparition 300ms both 400ms;
-  @include mob {
-    margin: 0;
-  }
-  @include tab {
-    margin: 0;
-  }
-}
-@media (min-width: 1440px) {
   .plats {
+    margin: 15px 15px 15px 15px;
+    animation: apparition 300ms both 400ms;
+    @include mob {
+    margin: 0;}
+    @include tab {
+    margin: 0;}
+    @media (min-width: 1440px) {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 25%;}
   }
-}
-
-.desserts {
-  margin: 15px 15px 15px 15px;
-  animation: apparition 1200ms both 1500ms;
-  @include mob {
-    margin: 0;
-  }
-  @include tab {
-    margin: 0;
-  }
-}
-@media (min-width: 1440px) {
   .desserts {
+   margin: 15px 15px 15px 15px;
+   animation: apparition 1200ms both 1500ms;
+   @include mob {
+    margin: 0;}
+   @include tab {
+    margin: 0;}
+   @media (min-width: 1440px) {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 25%;}
   }
-}
-// fin delay
+      // fin delay
 
+      // menu
   .menu {
     width: 85%;
     margin-left: 90px;
@@ -106,25 +96,11 @@ header {
     position: relative;
     border-radius: $p32 $p32 0 0;
     height: auto;
-    @media (min-width: 992px) {
-    margin-left: 56px;
-    }
-    @media (max-width: 1024px) {
-    margin-left: 0px;
-    width: 100%;
-    }
-    
-      h1 {
-        font-family: $fontsecondary;
-        padding-top: $p16;
-        font-size: 1.5rem;
-        margin-left: 4px;
-        @include mob {
-          margin-left: 16px;
-        }
-        @include tab {
-          margin-left: 16px;
-        }
+      @media (min-width: 992px) {
+        margin-left: 56px;
+      }
+      @media (max-width: 1024px) {
+        margin-left: 0px;
       }
       .menu_heart {
         display: flex;
@@ -134,9 +110,17 @@ header {
         @include mob {
           width: 100%;
         }
-         {
-          width: 93%;
-        }
+          h1 {
+            font-family: $fontsecondary;
+            padding-top: $p16;
+            font-size: 1.5rem;
+            margin-left: 4px;
+              @include mob {
+                margin-left: 16px;
+              }
+              @include tab {
+                margin-left: 16px;}
+              }
           .fa-stack {
             display: flex;
             font-size: 24px;
@@ -146,13 +130,13 @@ header {
             height: 36px;
             color: black;
             cursor: pointer;
-            @media ( max-width: 768px ) {
-              top: 25px
-              right: 34px;}
+            @include mob {
+              top: 24px;
+              left: 16px; }
           }
-          .fa-stack .bgnone {
-            opacity: 0;
-          }
+            .fa-stack .bgnone {
+              opacity: 0;
+            }
             &:hover i {
               animation: heart 600ms forwards;
               background: linear-gradient(#9356dc, #ff79da);
@@ -160,109 +144,110 @@ header {
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
-      }
+      } 
+    
       .title {
         @include mob {
           margin: 0;
         }
-          .title-underline {
-            border-bottom: 3px solid $green;
-            padding-bottom: 5px;
-            width: 10%;}
-            @include tab {
-              margin-left: $p16;}
-            @include mob {
-              margin-left: $p16;}
+        .title-underline {
+          border-bottom: 3px solid $green;
+          padding-bottom: 5px;
+          width: 10%;
+          @include tab {
+          margin-left: $p16;}
+          @include mob {
+          margin-left: $p16;}
+        }
       }
-    .btn_carte {
-      margin-left: 75px;
-      display: flex;
-      overflow: hidden;
-      background-color: #fff;
-      border-radius: 15px;
-      padding-left: 15px;
-      width: 100%;
-      height: 70px;
-      margin-bottom: 20px;
-      transform: scale(1);
-      cursor: pointer;
-      @include tab {
-        width: 80%;
-        margin-left: 50px;}
-      @include mob {
-        width: 87%;
-        margin-left: 18px;
-    }   
-      &:hover {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-        transform: scale(1.03);
-        transition: 350ms;
-      }
-      &:hover .btn_card_favorite {
-        width: 15%;
-        @include tab {
-          width: 20%;}
-        @include mob {
-          width: 20%;}
-      }
-      &:hover .btn_card_favorite .fa-circle-check {
-        animation: rotate 1000ms forwards;
-      }
-      .btn_card_favorite {
+      .btn_carte {
+        margin-left: 75px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #99e2d0;
-        height: 100%;
-        order: 2;
-        width: 0%;
-        transition: all 550ms cubic-bezier(0.47, 0.15, 0, 1);
-      }
-      .btn_card .fa-circle-check {
-        font-size: 24px;
-        color: #fff;
-      }
-      .btn_card_text {
-        display: flex;
-        flex-flow: column;
-        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
+        background-color: #fff;
+        border-radius: 15px;
+        padding-left: 15px;
+        width: 90%;
+        height: 70px;
+        margin-bottom: 20px;
+        transform: scale(1);
+        cursor: pointer;
+          @include tab {
+            width: 100%;
+            margin-left: 50px;}
+          @include mob {
+            width: 100%;
+            margin-left: 18px;}   
+        &:hover {
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          transform: scale(1.03);
+          transition: 350ms;
+        }
+        &:hover .btn_card_favorite {
+            width: 15%;
+          @include tab {
+            width: 25%;}
+          @include mob {
+            width: 25%;}
+        }
+        &:hover .btn_card_favorite .fa-circle-check {
+          animation: rotate 1000ms forwards;
+        }
+        .btn_card {
+          display: flex;
+          width: 100%;
+            h3 {
+              font-family: roboto, sans-serif;
+              font-size: 16px;
+              font-weight: bold;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              margin-bottom: 0;
+            }
+            p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-family: roboto, sans-serif;
+              font-size: 14px;
+              margin-top: 3px;
+            }
+        }
+        .btn_card_favorite {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #99e2d0;
+          height: 100%;
+          order: 2;
+          width: 0%;
+          transition: all 550ms cubic-bezier(0.47, 0.15, 0, 1);
+        }
+          .btn_card .fa-circle-check {
+            font-size: 24px;
+            color: #fff;
+          }
+          .btn_card_text {
+            display: flex;
+            flex-flow: column;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+          }
+        .btn_price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-family: roboto, sans-serif;
+        font-size: $p16;
+        font-weight: bold;
+        height: 100%;
+        padding-right: 15px;
+        }
       }
-  .btn_card {
-    display: flex;
-    width: 100%;
-    h3 {
-      font-family: roboto, sans-serif;
-      font-size: 16px;
-      font-weight: bold;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin-bottom: 0;
-    }
-    p {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-family: roboto, sans-serif;
-      font-size: 14px;
-      margin-top: 3px;
-    }
   }
-    .btn_price {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      font-family: roboto, sans-serif;
-      font-size: $p16;
-      font-weight: bold;
-      height: 100%;
-      padding-right: 15px;
-    }
-  }
-}
-.btn {
+  .btn {
     font-size: $p32 - 2px;
     background-image: $radiant;
     border-radius: $p32 $p32 $p32 $p32;
@@ -275,92 +260,87 @@ header {
     margin-bottom: $p32 + 4px;
     cursor: pointer;
     animation: apparition 1600ms both 1800ms;
-    @include mob {
+      @include mob {
         width: 40%;
         margin-left: 30%;}
-    &:hover {
-      transform: scale(1.01);
-      opacity: 0.9;
-    }    
-}
+      &:hover {
+        transform: scale(1.01);
+        opacity: 0.9;
+      }    
+  }
+  .footer {
+    @include display;
+    background-color: $darkgrey;
+    animation: apparition 1900ms both 2200ms;
+    width: 100%;
+    margin-top: 4px;
+      @include mob {
+        font-size: $p16 - 4px;}
 
-.footer {
-  @include display;
-  background-color: $darkgrey;
-  animation: apparition 1900ms both 2200ms;
-  width: 100%;
-  margin-top: -13px;
-  @include mob {
-    font-size: $p16 - 4px;
-  }
-    .ustensils {
-      color: $wcolor;
-      margin-left: $p16;
-      @include display;
-      gap: $p16;
-      padding: 0.1rem;
-      text-decoration:none;
-        @include mob {
-          margin-left: -3px;
-          width: 100%;}
-    }
-    .help {  
-      color: $wcolor;
-      margin-left: $p16;
-      @include display;
-      gap: $p16;
-      padding: 0.1rem;
-      text-decoration:none;
-      @include mob {
-        margin-left: -29px;
-        gap: 9px;}
-    }
-    .fas {
-    @include mob {
-      font-size: $p16;
+      .footer_container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $p32 + 4px;
+          @include mob {
+            margin-left: -190px;}
+        h3 {
+          font-family: $fontsecondary;
+          text-align: center;
+          position: relative;
+          color: $wcolor;
+          margin-left: $p32;
+          @include display;
+          font-size: $p32 - 7px;
+          margin-bottom: -0.1rem;
+            @include mob {
+              margin-left: -62px;
+              font-size: $p16;}
+        }
+        .ustensils {
+          color: $wcolor;
+          margin-left: $p16;
+          @include display;
+          gap: $p16;
+          padding: 0.1rem;
+          text-decoration:none;
+            @include mob {
+              margin-left: -3px;
+              width: 100%;}
+        }
+        .help {  
+          color: $wcolor;
+          margin-left: $p16;
+          @include display;
+          gap: $p16;
+          padding: 0.1rem;
+          text-decoration:none;
+          @include mob {
+            margin-left: -29px;
+            gap: 9px;}
+        }
+          .fas {
+          @include mob {
+          font-size: $p16;}
+          } 
+        .mentions {
+          color: $wcolor;
+          margin-left: $p16;
+          @include display;
+          padding: 0.1rem;
+          text-decoration:none;
+            @include mob {
+              margin-left: -64px;}
+        }
+        .mail {
+          color: $wcolor;
+          margin-left: $p16;
+          @include display;
+          gap: 16px;
+          padding: 0.1rem;
+          text-decoration:none;
+          @include mob {
+          margin-left: -111px;}
+        }
       }
-    } 
-  .mentions {
-    color: $wcolor;
-    margin-left: $p16;
-    @include display;
-    padding: 0.1rem;
-    text-decoration:none;
-    @include mob {
-      margin-left: -64px;
-    }
   }
-  .mail {
-    color: $wcolor;
-    margin-left: $p16;
-    @include display;
-    gap: 16px;
-    padding: 0.1rem;
-    text-decoration:none;
-    @include mob {
-      margin-left: -111px;
-    }
-  }
-  .footer_container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: $p32 + 4px;
-    @include mob {
-      margin-left: -190px;
-    }
-  }
-    h3 {
-      font-family: $fontsecondary;
-      text-align: center;
-      position: relative;
-      color: $wcolor;
-      margin-left: $p32;
-      @include display;
-        font-size: $p32 - 7px;
-        margin-bottom: -0.1rem;
-      @include mob {
-        margin-left: -62px;
-        font-size: $p16;
-      }
-    }
 }
