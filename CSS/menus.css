@@ -447,6 +447,7 @@ body .footer .footer_container .mentions {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 16px;
   padding: 0.1rem;
   text-decoration: none;
 }

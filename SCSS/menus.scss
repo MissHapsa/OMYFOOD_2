@@ -214,9 +214,7 @@
             }
         }
         .btn_card_favorite {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include display;
           background: #99e2d0;
           height: 100%;
           order: 2;
@@ -297,23 +295,13 @@
               font-size: $p16;}
         }
         .ustensils {
-          color: $wcolor;
-          margin-left: $p16;
-          @include display;
-          gap: $p16;
-          padding: 0.1rem;
-          text-decoration:none;
+          @include footer_element;
             @include mob {
               margin-left: -3px;
               width: 100%;}
         }
         .help {  
-          color: $wcolor;
-          margin-left: $p16;
-          @include display;
-          gap: $p16;
-          padding: 0.1rem;
-          text-decoration:none;
+          @include footer_element;
           @include mob {
             margin-left: -29px;
             gap: 9px;}
@@ -323,21 +311,12 @@
           font-size: $p16;}
           } 
         .mentions {
-          color: $wcolor;
-          margin-left: $p16;
-          @include display;
-          padding: 0.1rem;
-          text-decoration:none;
+          @include footer_element;
             @include mob {
               margin-left: -64px;}
         }
         .mail {
-          color: $wcolor;
-          margin-left: $p16;
-          @include display;
-          gap: 16px;
-          padding: 0.1rem;
-          text-decoration:none;
+          @include footer_element;
           @include mob {
           margin-left: -111px;}
         }

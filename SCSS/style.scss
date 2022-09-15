@@ -300,23 +300,13 @@ i {
     font-size: $p16 - 4px;
   }
     .ustensils {
-      color: $wcolor;
-      margin-left: $p16;
-      @include display;
-      gap: $p16;
-      padding: 0.1rem;
-      text-decoration:none;
+      @include footer_element;
         @include mob {
           margin-left: -3px;
           width: 100%;}
     }
     .help {  
-      color: $wcolor;
-      margin-left: $p16;
-      @include display;
-      gap: $p16;
-      padding: 0.1rem;
-      text-decoration:none;
+      @include footer_element;
       @include mob {
         margin-left: -29px;
         gap: 9px;}
@@ -327,22 +317,13 @@ i {
       }
     } 
   .mentions {
-    color: $wcolor;
-    margin-left: $p16;
-    @include display;
-    padding: 0.1rem;
-    text-decoration:none;
+    @include footer_element;
     @include mob {
       margin-left: -64px;
     }
   }
   .mail {
-    color: $wcolor;
-    margin-left: $p16;
-    @include display;
-    gap: 16px;
-    padding: 0.1rem;
-    text-decoration:none;
+    @include footer_element;
     @include mob {
       margin-left: -111px;
     }
