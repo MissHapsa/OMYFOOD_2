@@ -378,7 +378,6 @@ i {
   color: transparent;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   background-clip: text;
-  webkit-background-clip: text;
   opacity: 0;
   transition: all 50ms;
 }
@@ -473,7 +472,7 @@ i {
 }
 @media (max-width: 768px) {
   .footer .footer_container {
-    margin-left: -190px;
+    margin-left: -182px;
   }
 }
 .footer h3 {

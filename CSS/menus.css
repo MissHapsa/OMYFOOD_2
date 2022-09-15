@@ -383,7 +383,7 @@ body .footer .footer_container {
 }
 @media (max-width: 768px) {
   body .footer .footer_container {
-    margin-left: -190px;
+    margin-left: -182px;
   }
 }
 body .footer .footer_container h3 {
